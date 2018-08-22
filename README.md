@@ -1,6 +1,6 @@
 # easyengine.github.io
 
-[![Build Status](https://travis-ci.org/easyengine/easyengine.github.io.svg?branch=source)](https://travis-ci.org/easyengine/easyengine.github.io)
+[![Build Status](https://travis-ci.org/EasyEngine/easyengine.github.io.svg?branch=source)](https://travis-ci.org/EasyEngine/easyengine.github.io)
 
 GitBook documentation for the [EasyEngine](https://easyengine.io) project.
 
