@@ -1,0 +1,18 @@
+{
+  "root": "src",
+  "title": "EasyEngine",
+  "language": "en",
+  "plugins": ["-sharing", "edit-link"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/EasyEngine/easyengine.github.io/tree/source/src",
+      "label": "EDIT"
+    }
+  },
+  "structure": {
+    "summary": "SUMMARY.md"
+  },
+  "variables": {
+    "domain": "https://easyengine.io"
+  }
+}

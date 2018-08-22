@@ -1,0 +1,25 @@
+{
+  "name": "easyengine.github.io",
+  "version": "1.0.0",
+  "description": "EasyEngine documentation",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-cli": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "docs:prepare": "gitbook install",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EasyEngine/easyengine.github.io.git"
+  },
+  "author": "EasyEngine Contributors (https://github.com/EasyEngine/easyengine.github.io/contributors)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EasyEngine/easyengine.github.io/issues"
+  },
+  "homepage": "https://github.com/EasyEngine/easyengine.github.io#readme"
+}
