@@ -2,37 +2,37 @@
     "build-release": {
         "title": "Build and Release Process",
         "slug": "build-and-release-process",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine\/blob\/develop-v4\/docs\/build-and-release.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/buil-and-release.md",
         "parent": null
     },
     "ee-core-repo": {
         "title": "EasyEngine Core Repository",
         "slug": "easyengine-core-repository",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine\/blob\/develop-v4\/docs\/core-repo-structure.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob/master\/core-repo.md",
         "parent": null
     },
     "commands": {
         "title": "Commands",
         "slug": "commands",
-        "markdown_source": "https:\/\/github.com\/sagarnasit\/manifest\/blob\/master\/command.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/command.md",
         "parent": null
     },
     "site-command": {
         "title": "Site Commands",
         "slug": "site-commands",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/site-command\/blob\/develop\/README.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob/master\/site-command.md",
         "parent": "commands"
     },
     "site-wp-command": {
         "title": "Site WP Commands",
         "slug": "site-wp-commands",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/site-wp-command\/blob\/develop\/README.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob/master\/site-wp-command.md",
         "parent": "site-commands"
     },
     "cron-command": {
         "title": "Cron Commands",
         "slug": "cron-commands",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/cron-command\/blob\/develop\/README.md",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/cron-command.md",
         "parent": "commands"
     }
 }
