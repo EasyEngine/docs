@@ -13,7 +13,7 @@ Manages cron jobs in EasyEngine
  
  Adds a cron job to run a command at specific interval etc.
 
- ```
+ ```bash
  # Adds a cron job on example.com every 10 minutes
  $ ee cron add example.com --command='wp cron event run --due-now' --schedule='@every 10m'
  
@@ -33,7 +33,7 @@ Manages cron jobs in EasyEngine
  
  Updates a cron job.
  
- ```
+ ```bash
  # Updates site to run cron on
  $ ee cron update 1 --site='example1.com'
  
@@ -49,7 +49,7 @@ Manages cron jobs in EasyEngine
  
  Lists scheduled cron jobs.
  
- ```
+ ```bash
  Lists all scheduled cron jobs
  $ ee cron list --all
 
@@ -61,7 +61,7 @@ Manages cron jobs in EasyEngine
  
  Deletes a cron job
  
- ```
+ ```bash
  # Deletes a cron jobs
  $ ee cron delete 1
  ```
@@ -70,7 +70,7 @@ Manages cron jobs in EasyEngine
  
  Runs a cron job
  
- ```
+ ```bash
  # Runs a particular cron job
  $ ee cron run-now 1
  ```
