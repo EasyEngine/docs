@@ -32,7 +32,6 @@ git clone git@github.com:EasyEngine/easyengine.git && git checkout develop-v4
 2. Fork the command you want to work on.
 
 3. Update the `composer.json` in the EasyEngine core repository, replace that command from `require` block to have your command name. For example lets replace site command: 
-
 ~~```"easyengine/site-command": "dev-master"```~~
 
 ```"your-username/site-command": "dev-master"```
