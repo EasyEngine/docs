@@ -9,75 +9,75 @@ Manages cron jobs in EasyEngine
  * [delete](#delete)
  * [run-now](#run-now)
  
- ## add
- 
- Adds a cron job to run a command at specific interval etc.
+## add
 
- ```bash
- # Adds a cron job on example.com every 10 minutes
- $ ee cron add example.com --command='wp cron event run --due-now' --schedule='@every 10m'
- 
- # Adds a cron job on example.com every 1 minutes
- $ ee cron add example.com --command='wp cron event run --due-now' --schedule='* * * * *'
- 
- # Adds a cron job to host running EasyEngine
- $ ee cron add host --command='wp cron event run --due-now' --schedule='@every 10m'
- 
- # Adds a cron job to host running EasyEngine
- $ ee cron add host --command='wp media regenerate --yes' --schedule='@weekly'
- ```
- 
- Also, refer to [possible schedule values](#possible-schedule-values) to know more about it.
- 
- ## update
- 
- Updates a cron job.
- 
- ```bash
- # Updates site to run cron on
- $ ee cron update 1 --site='example1.com'
- 
- # Updates command of cron
- $ ee cron update 1 --command='wp cron event run --due-now'
- 
- # Updates schedule of cron
- $ ee cron update 1 --schedule='@every 1m'
- ```
- Also, refer to [possible schedule values](#possible-schedule-values) to know more about it.
+Adds a cron job to run a command at specific interval etc.
 
- ## list
- 
- Lists scheduled cron jobs.
- 
- ```bash
- Lists all scheduled cron jobs
- $ ee cron list --all
+```
+# Adds a cron job on example.com every 10 minutes
+$ ee cron add example.com --command='wp cron event run --due-now' --schedule='@every 10m'
 
- Lists all scheduled cron jobs of example.com
- $ ee cron list example.com
- ```
- 
- ## delete
- 
- Deletes a cron job
- 
- ```bash
- # Deletes a cron jobs
- $ ee cron delete 1
- ```
- 
- ## run-now
- 
- Runs a cron job
- 
- ```bash
- # Runs a particular cron job
- $ ee cron run-now 1
- ```
+# Adds a cron job on example.com every 1 minutes
+$ ee cron add example.com --command='wp cron event run --due-now' --schedule='* * * * *'
+
+# Adds a cron job to host running EasyEngine
+$ ee cron add host --command='wp cron event run --due-now' --schedule='@every 10m'
+
+# Adds a cron job to host running EasyEngine
+$ ee cron add host --command='wp media regenerate --yes' --schedule='@weekly'
+```
+
+Also, refer to [possible schedule values](#possible-schedule-values) to know more about it.
+
+## update
+
+Updates a cron job.
+
+```
+# Updates site to run cron on
+$ ee cron update 1 --site='example1.com'
+
+# Updates command of cron
+$ ee cron update 1 --command='wp cron event run --due-now'
+
+# Updates schedule of cron
+$ ee cron update 1 --schedule='@every 1m'
+```
+Also, refer to [possible schedule values](#possible-schedule-values) to know more about it.
+
+## list
+
+Lists scheduled cron jobs.
+
+```
+Lists all scheduled cron jobs
+$ ee cron list --all
+
+Lists all scheduled cron jobs of example.com
+$ ee cron list example.com
+```
+
+## delete
+
+Deletes a cron job
+
+```
+# Deletes a cron jobs
+$ ee cron delete 1
+```
+
+## run-now
+
+Runs a cron job
+
+```
+# Runs a particular cron job
+$ ee cron run-now 1
+```
 
 ## possible schedule values
 
- We have helper to easily specify scheduling format:
+We have helper to easily specify scheduling format:
 
 | Entry                  | Description                                | Equivalent To |
 | ---------------------- | ------------------------------------------ | ------------- |
@@ -93,8 +93,8 @@ This is supported by following format:
 `@every <duration>`
 
 Where duration can be combination of:
-   <number>h  - hour
-   <number>m  - minute
-   <number>s  - second
+<number>h  - hour
+<number>m  - minute
+<number>s  - second
 
-   So `1h10m2s` is also a valid duration
+So `1h10m2s` is also a valid duration
