@@ -34,5 +34,11 @@
         "slug": "cron-commands",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/cron-command.md",
         "parent": "commands"
+    },
+    "ee-dev-doc": {
+        "title": "Easy Engine Developer Doc",
+        "slug": "ee-dev-doc",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/ee-developer-doc.md",
+        "parent": null
     }
 }
