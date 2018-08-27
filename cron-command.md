@@ -8,7 +8,7 @@ Manages cron jobs in EasyEngine
  * [list](#list)
  * [delete](#delete)
  * [run-now](#run-now)
- 
+
 ## add
 
 Adds a cron job to run a command at specific interval etc.
