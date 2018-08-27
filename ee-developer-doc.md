@@ -18,7 +18,6 @@ git clone git@github.com:your-username/easyengine.git && git checkout develop-v4
 2. Run `composer install` in the core repository after this.  
 
 3. Make required changes and check them by running it locally using the following from the easyengine repository root:
-
 ```bash
 $ ./bin/ee command
 ```
