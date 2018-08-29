@@ -1,4 +1,4 @@
-EasyEngine Core Repository
+# EasyEngine Core Repository
 ===
 
 The core repository contains the cli interface for EasyEngine and the internal api's to facilitate and accommodate the creation and execution of commands. It is built on top of [WP-CLI](https://github.com/wp-cli/wp-cli) and follows the same basic structure.

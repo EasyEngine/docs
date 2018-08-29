@@ -1,4 +1,4 @@
-Build and Release Process
+# Build and Release Process
 ===
 
 Currently EasyEngine v4 is in development stage. Hence the main branch for v4 is [master-v4](https://github.com/easyengine/easyengine/tree/master-v4) and the ongoing development branch is [develop-v4](https://github.com/easyengine/easyengine/tree/develop-v4).

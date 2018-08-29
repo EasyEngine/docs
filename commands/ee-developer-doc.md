@@ -1,4 +1,4 @@
-EasyEngine Developer Docs
+# EasyEngine Developer Docs
 =========================
 
 ## Requirements
