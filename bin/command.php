@@ -197,7 +197,7 @@ EOT;
 				$cmd_path = str_replace( array( WP_CLI_HANDBOOK_PATH . '/commands/', '.md' ), '', $file );
 				$title = '';
 				$contents = file_get_contents( $file );
-				if ( preg_match( '/^#\swp\s(.+)/', $contents, $matches ) ) {
+				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
 					$title = $matches[1];
 				}
 				$parent = null;
