@@ -1,62 +1,69 @@
 {
+    "admin-tools-command": {
+        "title": "admin-tools",
+        "slug": "admin-tools-command",
+        "cmd_path": "admin-tools-command",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/admin-tools-command.md"
+    },
     "buil-and-release": {
-        "title": "",
+        "title": "Build and Release Process",
         "slug": "buil-and-release",
         "cmd_path": "buil-and-release",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/buil-and-release.md"
     },
     "core-repo": {
-        "title": "",
+        "title": "EasyEngine Core Repository",
         "slug": "core-repo",
         "cmd_path": "core-repo",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/core-repo.md"
     },
     "cron-command": {
-        "title": "",
+        "title": "EasyEngine\/cron-command",
         "slug": "cron-command",
         "cmd_path": "cron-command",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron-command.md"
     },
     "ee-developer-doc": {
-        "title": "",
+        "title": "EasyEngine Developer Docs",
         "slug": "ee-developer-doc",
         "cmd_path": "ee-developer-doc",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/ee-developer-doc.md"
     },
     "post": {
-        "title": "",
+        "title": "post",
         "slug": "post",
         "cmd_path": "post",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/post.md"
     },
     "site-command": {
-        "title": "",
+        "title": "EasyEngine\/site-command",
         "slug": "site-command",
         "cmd_path": "site-command",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site-command.md"
     },
     "site-wp-command": {
-        "title": "",
+        "title": "EasyEngine\/site-wp-command",
         "slug": "site-wp-command",
         "cmd_path": "site-wp-command",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site-wp-command.md"
     },
     "post\/create": {
-        "title": "",
+        "title": "create",
         "slug": "create",
         "cmd_path": "post\/create",
         "parent": "post",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/post\/create.md"
     },
     "post\/delete": {
-        "title": "",
+        "title": "delete",
         "slug": "delete",
         "cmd_path": "post\/delete",
         "parent": "post",
