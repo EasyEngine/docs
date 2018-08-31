@@ -1,8 +1,30 @@
 {
-    "command": {
-        "title": "",
-        "slug": "command",
-        "markdown_source": "https:\/\/github.com\/wp-cli\/handbook\/blob\/master\/command.md",
-        "parent": null
+    "admin-tools-command": {
+        "title": "admin-tools",
+        "slug": "admin-tools-command",
+        "cmd_path": "admin-tools-command",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/handbook\/admin-tools-command.md"
+    },
+    "buil-and-release": {
+        "title": "Build and Release Process",
+        "slug": "buil-and-release",
+        "cmd_path": "buil-and-release",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/handbook\/buil-and-release.md"
+    },
+    "core-repo": {
+        "title": "EasyEngine Core Repository",
+        "slug": "core-repo",
+        "cmd_path": "core-repo",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/handbook\/core-repo.md"
+    },
+    "ee-developer-doc": {
+        "title": "EasyEngine Developer Docs",
+        "slug": "ee-developer-doc",
+        "cmd_path": "ee-developer-doc",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/handbook\/ee-developer-doc.md"
     }
 }

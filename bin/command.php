@@ -161,42 +161,43 @@ class Command {
 	 */
 
 	public function gen_hb_manifest() {
-		$manifest = array();
-		// Top-level pages
-		foreach ( glob( WP_CLI_HANDBOOK_PATH . '/*.md' ) as $file ) {
-			$slug = basename( $file, '.md' );
-			if ( 'README' === $slug ) {
-				continue;
+		$manifest      = array();
+		$paths         = array(
+			WP_CLI_HANDBOOK_PATH . '/handbook/*.md',
+			WP_CLI_HANDBOOK_PATH . '/handbook/*/*.md',
+			WP_CLI_HANDBOOK_PATH . '/handbook/*/*/*.md',
+		);
+		$commands_data = array();
+		foreach ( $paths as $path ) {
+			foreach ( glob( $path ) as $file ) {
+				$slug     = basename( $file, '.md' );
+				$cmd_path = str_replace( array( WP_CLI_HANDBOOK_PATH . '/handbook/', '.md' ), '', $file );
+				$title    = '';
+				$contents = file_get_contents( $file );
+				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
+					$title = $matches[1];
+				}
+				$parent = null;
+				if ( stripos( $cmd_path, '/' ) ) {
+					$bits = explode( '/', $cmd_path );
+					array_pop( $bits );
+					$parent = implode( '/', $bits );
+				}
+				$manifest[ $cmd_path ] = array(
+					'title'           => $title,
+					'slug'            => $slug,
+					'cmd_path'        => $cmd_path,
+					'parent'          => $parent,
+					'markdown_source' => sprintf( 'https://github.com/EasyEngine/easyengine.github.io/blob/master/handbook/%s.md', $cmd_path ),
+				);
+				if ( ! empty( $commands_data[ $title ] ) ) {
+					$manifest[ $cmd_path ] = array_merge( $manifest[ $cmd_path ], $commands_data[ $title ] );
+				}
 			}
-			$title    = '';
-			$contents = file_get_contents( $file );
-			if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
-				$title = $matches[1];
-			}
-			$manifest[ $slug ] = array(
-				'title'           => $title,
-				'slug'            => 'index' === $slug ? 'handbook' : $slug,
-				'markdown_source' => sprintf( 'https://github.com/wp-cli/handbook/blob/master/%s.md', $slug ),
-				'parent'          => null,
-			);
-		}
-		// Internal API pages
-		foreach ( glob( WP_CLI_HANDBOOK_PATH . '/internal-api/*.md' ) as $file ) {
-			$slug     = basename( $file, '.md' );
-			$title    = '';
-			$contents = file_get_contents( $file );
-			if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
-				$title = $matches[1];
-			}
-			$manifest[ $slug ] = array(
-				'title'           => $title,
-				'slug'            => $slug,
-				'markdown_source' => sprintf( 'https://github.com/wp-cli/handbook/blob/master/internal-api/%s.md', $slug ),
-				'parent'          => 'internal-api',
-			);
 		}
 		file_put_contents( WP_CLI_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
-		WP_CLI::success( 'Generated handbook-manifest.json' );
+		$count = count( $manifest );
+		WP_CLI::success( "Generated handbook-manifest.json" );
 	}
 
 	/**
