@@ -33,7 +33,7 @@ class Command {
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$wp = self::invoke_wp_cli( ' ee --skip-packages cli cmd-dump' );
+		$wp = self::invoke_wp_cli( ' sudo ee --skip-packages cli cmd-dump' );
 
 		$bundled_cmds = array();
 		foreach ( $wp['subcommands'] as $k => $cmd ) {
@@ -48,7 +48,7 @@ class Command {
 			self::gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
-		$wp_with_packages = self::invoke_wp_cli( 'WP_CLI_PACKAGES_DIR=' . $package_dir . ' ee cli cmd-dump' );
+		$wp_with_packages = self::invoke_wp_cli( 'WP_CLI_PACKAGES_DIR=' . $package_dir . ' sudo ee cli cmd-dump' );
 		foreach ( $wp_with_packages['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump', 'handbook' ) )
 				|| in_array( $cmd['name'], $bundled_cmds ) ) {
@@ -108,10 +108,10 @@ class Command {
 	/**
 	 * Generate a manifest document of all command pages
 	 *
-	 * @subcommand gen-manifest
+	 * @subcommand gen-commands-manifest
 	 */
 
-	public function gen_manifest() {
+	public function gen_commands_manifest() {
 		$manifest      = array();
 		$paths         = array(
 			WP_CLI_HANDBOOK_PATH . '/commands/*.md',
@@ -149,9 +149,9 @@ class Command {
 				}
 			}
 		}
-		file_put_contents( WP_CLI_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
+		file_put_contents( WP_CLI_HANDBOOK_PATH . '/bin/commands-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
 		$count = count( $manifest );
-		WP_CLI::success( "Generated handbook-manifest.json of {$count} commands" );
+		WP_CLI::success( "Generated commands-manifest.json of {$count} commands" );
 	}
 
 	/**
