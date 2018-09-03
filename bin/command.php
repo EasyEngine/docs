@@ -1,14 +1,14 @@
 <?php
 
-namespace WP_CLI\Handbook;
+namespace EE\Handbook;
 
-use WP_CLI;
+use EE;
 use Mustache_Engine;
 
 /**
  * WP-CLI commands to generate docs from the codebase.
  */
-define( 'WP_CLI_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
+define( 'EE_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
 
 /**
  * @when before_wp_load
@@ -24,7 +24,7 @@ class Command {
 		self::gen_commands();
 		self::gen_commands_manifest();
 		self::gen_hb_manifest();
-		WP_CLI::success( 'Generated all doc pages.' );
+		EE::success( 'Generated all doc pages.' );
 	}
 
 	/**
@@ -33,11 +33,11 @@ class Command {
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$wp = self::invoke_wp_cli( ' sudo ee --skip-packages cli cmd-dump' );
+		$wp = self::invoke_wp_cli( 'cli cmd-dump' );
 
 		$bundled_cmds = array();
 		foreach ( $wp['subcommands'] as $k => $cmd ) {
-			if ( in_array( $cmd['name'], array( 'website', 'api-dump', 'handbook' ) ) ) {
+			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) ) ) {
 				unset( $wp['subcommands'][ $k ] );
 				continue;
 			}
@@ -48,9 +48,9 @@ class Command {
 			self::gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
-		$wp_with_packages = self::invoke_wp_cli( 'WP_CLI_PACKAGES_DIR=' . $package_dir . ' sudo ee cli cmd-dump' );
+		$wp_with_packages = self::invoke_wp_cli( 'cli cmd-dump' );
 		foreach ( $wp_with_packages['subcommands'] as $k => $cmd ) {
-			if ( in_array( $cmd['name'], array( 'website', 'api-dump', 'handbook' ) )
+			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) )
 				|| in_array( $cmd['name'], $bundled_cmds ) ) {
 				unset( $wp_with_packages['subcommands'][ $k ] );
 			}
@@ -59,7 +59,7 @@ class Command {
 		foreach ( $wp_with_packages['subcommands'] as $cmd ) {
 			self::gen_cmd_pages( $cmd );
 		}
-		WP_CLI::success( 'Generated all command pages.' );
+		EE::success( 'Generated all command pages.' );
 	}
 
 	/**
@@ -89,7 +89,7 @@ class Command {
 					$repo_url = 'https://github.com/' . $matches[1];
 				}
 			} else {
-				WP_CLI::error( 'No callable for: ' . var_export( $static, true ) );
+				EE::error( 'No callable for: ' . var_export( $static, true ) );
 			}
 		}
 		$commands_data[ $full ] = array(
@@ -114,18 +114,18 @@ class Command {
 	public function gen_commands_manifest() {
 		$manifest      = array();
 		$paths         = array(
-			WP_CLI_HANDBOOK_PATH . '/commands/*.md',
-			WP_CLI_HANDBOOK_PATH . '/commands/*/*.md',
-			WP_CLI_HANDBOOK_PATH . '/commands/*/*/*.md',
+			EE_HANDBOOK_PATH . '/commands/*.md',
+			EE_HANDBOOK_PATH . '/commands/*/*.md',
+			EE_HANDBOOK_PATH . '/commands/*/*/*.md',
 		);
 		$commands_data = array();
-		// foreach( WP_CLI::get_root_command()->get_subcommands() as $command ) {
+		// foreach( EE::get_root_command()->get_subcommands() as $command ) {
 		// 	self::update_commands_data( $command, $commands_data, '' );
 		// }
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
-				$cmd_path = str_replace( array( WP_CLI_HANDBOOK_PATH . '/commands/', '.md' ), '', $file );
+				$cmd_path = str_replace( array( EE_HANDBOOK_PATH . '/commands/', '.md' ), '', $file );
 				$title    = '';
 				$contents = file_get_contents( $file );
 				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
@@ -149,9 +149,9 @@ class Command {
 				}
 			}
 		}
-		file_put_contents( WP_CLI_HANDBOOK_PATH . '/bin/commands-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
+		file_put_contents( EE_HANDBOOK_PATH . '/bin/commands-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
 		$count = count( $manifest );
-		WP_CLI::success( "Generated commands-manifest.json of {$count} commands" );
+		EE::success( "Generated commands-manifest.json of {$count} commands" );
 	}
 
 	/**
@@ -163,15 +163,15 @@ class Command {
 	public function gen_hb_manifest() {
 		$manifest      = array();
 		$paths         = array(
-			WP_CLI_HANDBOOK_PATH . '/handbook/*.md',
-			WP_CLI_HANDBOOK_PATH . '/handbook/*/*.md',
-			WP_CLI_HANDBOOK_PATH . '/handbook/*/*/*.md',
+			EE_HANDBOOK_PATH . '/handbook/*.md',
+			EE_HANDBOOK_PATH . '/handbook/*/*.md',
+			EE_HANDBOOK_PATH . '/handbook/*/*/*.md',
 		);
 		$commands_data = array();
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
-				$cmd_path = str_replace( array( WP_CLI_HANDBOOK_PATH . '/handbook/', '.md' ), '', $file );
+				$cmd_path = str_replace( array( EE_HANDBOOK_PATH . '/handbook/', '.md' ), '', $file );
 				$title    = '';
 				$contents = file_get_contents( $file );
 				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
@@ -195,9 +195,9 @@ class Command {
 				}
 			}
 		}
-		file_put_contents( WP_CLI_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
+		file_put_contents( EE_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
 		$count = count( $manifest );
-		WP_CLI::success( "Generated handbook-manifest.json" );
+		EE::success( "Generated handbook-manifest.json" );
 	}
 
 	/**
@@ -208,7 +208,7 @@ class Command {
 
 	public function api_dump() {
 		$apis = array();
-		require WP_CLI_ROOT . '/php/utils-wp.php';
+		require EE_ROOT . '/php/utils-wp.php';
 		$functions = get_defined_functions();
 		foreach ( $functions['user'] as $function ) {
 			$reflection = new \ReflectionFunction( $function );
@@ -220,7 +220,7 @@ class Command {
 		}
 		$classes = get_declared_classes();
 		foreach ( $classes as $class ) {
-			if ( false === stripos( $class, 'WP_CLI' ) ) {
+			if ( false === stripos( $class, 'EE' ) ) {
 				continue;
 			}
 			$reflection = new \ReflectionClass( $class );
@@ -240,18 +240,7 @@ class Command {
 		$parent[] = $cmd['name'];
 		static $params;
 		if ( ! isset( $params ) ) {
-			$params = self::invoke_wp_cli( 'wp --skip-packages cli param-dump' );
-			// Preserve positioning of 'url' param
-			$url_param = $params['url'];
-			unset( $params['url'] );
-			$new_params = array();
-			foreach ( $params as $param => $meta ) {
-				$new_params[ $param ] = $meta;
-				if ( 'path' === $param ) {
-					$new_params['url'] = $url_param;
-				}
-			}
-			$params = $new_params;
+			$params = self::invoke_wp_cli( 'cli param-dump' );
 		}
 		$binding                = $cmd;
 		$binding['synopsis']    = implode( ' ', $parent );
@@ -341,7 +330,7 @@ EOT;
 			mkdir( dirname( $path ) );
 		}
 		file_put_contents( "$path.md", self::render( 'subcmd-list.mustache', $binding ) );
-		WP_CLI::log( 'Generated /commands/' . $binding['path'] . '/' );
+		EE::log( 'Generated /commands/' . $binding['path'] . '/' );
 		if ( ! isset( $cmd['subcommands'] ) )
 			return;
 		foreach ( $cmd['subcommands'] as $subcmd ) {
@@ -467,22 +456,20 @@ EOT;
 		return $ret;
 	}
 
-	private static function invoke_wp_cli( $cmd ) {
+	private static function invoke_wp_cli( $args ) {
+
 		ob_start();
-		system( "WP_CLI_CONFIG_PATH=/dev/null $cmd", $return_code );
+		EE::run_command( explode(' ', $args ) );
 		$json = ob_get_clean();
-		if ( $return_code ) {
-			echo "WP-CLI returned error code: $return_code\n";
-			exit( 1 );
-		}
+
 		return json_decode( $json, true );
 	}
 
 	private static function render( $path, $binding ) {
 		$m        = new Mustache_Engine;
-		$template = file_get_contents( WP_CLI_HANDBOOK_PATH . "/bin/templates/$path" );
+		$template = file_get_contents( EE_HANDBOOK_PATH . "/bin/templates/$path" );
 		return $m->render( $template, $binding );
 	}
 }
 
-WP_CLI::add_command( 'handbook', '\WP_CLI\Handbook\Command' );
+EE::add_command( 'handbook', '\EE\Handbook\Command' );
