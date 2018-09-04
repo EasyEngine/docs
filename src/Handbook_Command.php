@@ -1,19 +1,18 @@
 <?php
-
-namespace EE\Handbook;
-
-use EE;
-use Mustache_Engine;
-
 /**
- * WP-CLI commands to generate docs from the codebase.
+ * Generate markdowns and manifest of ee commands.
+ *
+ * ## EXAMPLES
+ *
+ *     # Generate markdowns of all commands.
+ *     $ ee handbook gen-command
+ *
+ * @package ee-handbook
  */
+
 define( 'EE_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
 
-/**
- * @when before_wp_load
- */
-class Command {
+class Handbook_Command extends EE_Command{
 
 	/**
 	 * Regenerate all doc pages
@@ -28,12 +27,12 @@ class Command {
 	}
 
 	/**
-	 * Generate command pages
+	 * Generate command's markdown pages
 	 *
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$wp = self::invoke_wp_cli( 'cli cmd-dump' );
+		$wp = self::invoke_ee( 'cli cmd-dump' );
 
 		$bundled_cmds = array();
 		foreach ( $wp['subcommands'] as $k => $cmd ) {
@@ -48,7 +47,7 @@ class Command {
 			self::gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
-		$wp_with_packages = self::invoke_wp_cli( 'cli cmd-dump' );
+		$wp_with_packages = self::invoke_ee( 'cli cmd-dump' );
 		foreach ( $wp_with_packages['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) )
 				|| in_array( $cmd['name'], $bundled_cmds ) ) {
@@ -65,7 +64,6 @@ class Command {
 	/**
 	 * Update the commands data array with new data
 	 */
-
 	private static function update_commands_data( $command, &$commands_data, $parent ) {
 		$full       = trim( $parent . ' ' . $command->get_name() );
 		$reflection = new \ReflectionClass( $command );
@@ -119,9 +117,9 @@ class Command {
 			EE_HANDBOOK_PATH . '/commands/*/*/*.md',
 		);
 		$commands_data = array();
-		// foreach( EE::get_root_command()->get_subcommands() as $command ) {
-		// 	self::update_commands_data( $command, $commands_data, '' );
-		// }
+		 foreach( EE::get_root_command()->get_subcommands() as $command ) {
+		 	self::update_commands_data( $command, $commands_data, '' );
+		 }
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
@@ -200,47 +198,11 @@ class Command {
 		EE::success( "Generated handbook-manifest.json" );
 	}
 
-	/**
-	 * Dump internal API PHPDoc to JSON
-	 *
-	 * @subcommand api-dump
-	 */
-
-	public function api_dump() {
-		$apis = array();
-		require EE_ROOT . '/php/utils-wp.php';
-		$functions = get_defined_functions();
-		foreach ( $functions['user'] as $function ) {
-			$reflection = new \ReflectionFunction( $function );
-			$phpdoc     = $reflection->getDocComment();
-			if ( false === stripos( $phpdoc, '@access public' ) ) {
-				continue;
-			}
-			$apis[] = self::get_simple_representation( $reflection );
-		}
-		$classes = get_declared_classes();
-		foreach ( $classes as $class ) {
-			if ( false === stripos( $class, 'EE' ) ) {
-				continue;
-			}
-			$reflection = new \ReflectionClass( $class );
-			foreach ( $reflection->getMethods() as $method ) {
-				$method_reflection = new \ReflectionMethod( $method->class, $method->name );
-				$phpdoc            = $method_reflection->getDocComment();
-				if ( false === stripos( $phpdoc, '@access public' ) ) {
-					continue;
-				}
-				$apis[] = self::get_simple_representation( $method_reflection );
-			}
-		}
-		echo json_encode( $apis );
-	}
-
 	private static function gen_cmd_pages( $cmd, $parent = array() ) {
 		$parent[] = $cmd['name'];
 		static $params;
 		if ( ! isset( $params ) ) {
-			$params = self::invoke_wp_cli( 'cli param-dump' );
+			$params = self::invoke_ee( 'cli param-dump' );
 		}
 		$binding                = $cmd;
 		$binding['synopsis']    = implode( ' ', $parent );
@@ -339,65 +301,6 @@ EOT;
 	}
 
 	/**
-	 * Get a simple representation of a function or method
-	 *
-	 * @param Reflection
-	 *
-	 * @return array
-	 */
-	private static function get_simple_representation( $reflection ) {
-		$signature  = $reflection->getName();
-		$parameters = array();
-		foreach ( $reflection->getParameters() as $parameter ) {
-			$parameter_signature = '$' . $parameter->getName();
-			if ( $parameter->isOptional() ) {
-				$default_value = $parameter->getDefaultValue();
-				if ( false === $default_value ) {
-					$parameter_signature .= ' = false';
-				} else if ( array() === $default_value ) {
-					$parameter_signature .= ' = array()';
-				} else if ( '' === $default_value ) {
-					$parameter_signature .= " = ''";
-				} else if ( null === $default_value ) {
-					$parameter_signature .= ' = null';
-				} else if ( true === $default_value ) {
-					$parameter_signature .= ' = true';
-				} else {
-					$parameter_signature .= ' = ' . $default_value;
-				}
-			}
-			$parameters[] = $parameter_signature;
-		}
-		if ( ! empty( $parameters ) ) {
-			$signature = $signature . '( ' . implode( ', ', $parameters ) . ' )';
-		} else {
-			$signature = $signature . '()';
-		}
-		$phpdoc = $reflection->getDocComment();
-		$type   = strtolower( str_replace( 'Reflection', '', get_class( $reflection ) ) );
-		$class  = '';
-		switch ( $type ) {
-			case 'function':
-				$full_name = $reflection->getName();
-				break;
-			case 'method':
-				$separator = $reflection->isStatic() ? '::' : '->';
-				$class     = $reflection->class;
-				$full_name = $class . $separator . $reflection->getName();
-				$signature = $class . $separator . $signature;
-				break;
-		}
-		return array(
-			'phpdoc'     => self::parse_docblock( $phpdoc ),
-			'type'       => $type,
-			'signature'  => $signature,
-			'short_name' => $reflection->getShortName(),
-			'full_name'  => $full_name,
-			'class'      => $class,
-		);
-	}
-
-	/**
 	 * Parse PHPDoc into a structured representation.
 	 *
 	 * @param string $docblock
@@ -456,7 +359,7 @@ EOT;
 		return $ret;
 	}
 
-	private static function invoke_wp_cli( $args ) {
+	private static function invoke_ee( $args ) {
 
 		ob_start();
 		EE::run_command( explode(' ', $args ) );
@@ -467,9 +370,7 @@ EOT;
 
 	private static function render( $path, $binding ) {
 		$m        = new Mustache_Engine;
-		$template = file_get_contents( EE_HANDBOOK_PATH . "/bin/templates/$path" );
+		$template = file_get_contents( EE_HANDBOOK_PATH . "/templates/$path" );
 		return $m->render( $template, $binding );
 	}
 }
-
-EE::add_command( 'handbook', '\EE\Handbook\Command' );
