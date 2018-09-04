@@ -15,7 +15,11 @@ define( 'EE_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
 class Handbook_Command extends EE_Command{
 
 	/**
-	 * Regenerate all doc pages
+	 * Generate markdowns for all commands, generate manifest for commands markdown and generate manifest for handbook.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     $ ee handbook gen-all
 	 *
 	 * @subcommand gen-all
 	 */
@@ -27,35 +31,39 @@ class Handbook_Command extends EE_Command{
 	}
 
 	/**
-	 * Generate command's markdown pages
+	 * Generate markdown file for each ee command.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     $ ee handbook gen-commands
 	 *
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$wp = self::invoke_ee( 'cli cmd-dump' );
+		$ee = self::invoke_ee( 'cli cmd-dump' );
 
 		$bundled_cmds = array();
-		foreach ( $wp['subcommands'] as $k => $cmd ) {
+		foreach ( $ee['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) ) ) {
-				unset( $wp['subcommands'][ $k ] );
+				unset( $ee['subcommands'][ $k ] );
 				continue;
 			}
 			$bundled_cmds[] = $cmd['name'];
 		}
-		$wp['subcommands'] = array_values( $wp['subcommands'] );
-		foreach ( $wp['subcommands'] as $cmd ) {
+		$ee['subcommands'] = array_values( $ee['subcommands'] );
+		foreach ( $ee['subcommands'] as $cmd ) {
 			self::gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
-		$wp_with_packages = self::invoke_ee( 'cli cmd-dump' );
-		foreach ( $wp_with_packages['subcommands'] as $k => $cmd ) {
+		$ee_with_packages = self::invoke_ee( 'cli cmd-dump' );
+		foreach ( $ee_with_packages['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) )
 				|| in_array( $cmd['name'], $bundled_cmds ) ) {
-				unset( $wp_with_packages['subcommands'][ $k ] );
+				unset( $ee_with_packages['subcommands'][ $k ] );
 			}
 		}
-		$wp_with_packages['subcommands'] = array_values( $wp_with_packages['subcommands'] );
-		foreach ( $wp_with_packages['subcommands'] as $cmd ) {
+		$ee_with_packages['subcommands'] = array_values( $ee_with_packages['subcommands'] );
+		foreach ( $ee_with_packages['subcommands'] as $cmd ) {
 			self::gen_cmd_pages( $cmd );
 		}
 		EE::success( 'Generated all command pages.' );
@@ -104,11 +112,14 @@ class Handbook_Command extends EE_Command{
 	}
 
 	/**
-	 * Generate a manifest document of all command pages
+	 * Generate `bin/commands-manifest.json` file from markdown in `commands` directory.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     $ ee handbook gen-commands-manifest
 	 *
 	 * @subcommand gen-commands-manifest
 	 */
-
 	public function gen_commands_manifest() {
 		$manifest      = array();
 		$paths         = array(
@@ -153,11 +164,14 @@ class Handbook_Command extends EE_Command{
 	}
 
 	/**
-	 * Generate a manifest document of all handbook pages
+	 * Generate `bin/handbook-manifest.json` file from markdown in `handbook` directory.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     $ ee handbook gen-hb-manifest
 	 *
 	 * @subcommand gen-hb-manifest
 	 */
-
 	public function gen_hb_manifest() {
 		$manifest      = array();
 		$paths         = array(
