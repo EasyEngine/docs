@@ -4,405 +4,405 @@
         "slug": "admin-tools",
         "cmd_path": "admin-tools",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/admin-tools.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools.md"
     },
     "auth": {
         "title": "ee auth",
         "slug": "auth",
         "cmd_path": "auth",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/auth.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth.md"
     },
     "cli": {
         "title": "ee cli",
         "slug": "cli",
         "cmd_path": "cli",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli.md"
     },
     "cron": {
         "title": "ee cron",
         "slug": "cron",
         "cmd_path": "cron",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron.md"
     },
     "handbook": {
         "title": "ee handbook",
         "slug": "handbook",
         "cmd_path": "handbook",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook.md"
     },
     "help": {
         "title": "ee help",
         "slug": "help",
         "cmd_path": "help",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/help.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/help.md"
     },
     "mailhog": {
         "title": "ee mailhog",
         "slug": "mailhog",
         "cmd_path": "mailhog",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/mailhog.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog.md"
     },
     "shell": {
         "title": "ee shell",
         "slug": "shell",
         "cmd_path": "shell",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/shell.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/shell.md"
     },
     "site": {
         "title": "ee site",
         "slug": "site",
         "cmd_path": "site",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site.md"
     },
     "wp": {
         "title": "ee wp",
         "slug": "wp",
         "cmd_path": "wp",
         "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp.md"
     },
     "admin-tools\/down": {
         "title": "ee admin-tools down",
         "slug": "down",
         "cmd_path": "admin-tools\/down",
         "parent": "admin-tools",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/admin-tools\/down.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/down.md"
     },
     "admin-tools\/install": {
         "title": "ee admin-tools install",
         "slug": "install",
         "cmd_path": "admin-tools\/install",
         "parent": "admin-tools",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/admin-tools\/install.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/install.md"
     },
     "admin-tools\/up": {
         "title": "ee admin-tools up",
         "slug": "up",
         "cmd_path": "admin-tools\/up",
         "parent": "admin-tools",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/admin-tools\/up.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/up.md"
     },
     "auth\/create": {
         "title": "ee auth create",
         "slug": "create",
         "cmd_path": "auth\/create",
         "parent": "auth",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/auth\/create.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/create.md"
     },
     "auth\/delete": {
         "title": "ee auth delete",
         "slug": "delete",
         "cmd_path": "auth\/delete",
         "parent": "auth",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/auth\/delete.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/delete.md"
     },
     "auth\/list": {
         "title": "ee auth list",
         "slug": "list",
         "cmd_path": "auth\/list",
         "parent": "auth",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/auth\/list.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/list.md"
     },
     "auth\/whitelist": {
         "title": "ee auth whitelist",
         "slug": "whitelist",
         "cmd_path": "auth\/whitelist",
         "parent": "auth",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/auth\/whitelist.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/whitelist.md"
     },
     "cli\/alias": {
         "title": "ee cli alias",
         "slug": "alias",
         "cmd_path": "cli\/alias",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/alias.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/alias.md"
     },
     "cli\/check-update": {
         "title": "ee cli check-update",
         "slug": "check-update",
         "cmd_path": "cli\/check-update",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/check-update.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/check-update.md"
     },
     "cli\/cmd-dump": {
         "title": "ee cli cmd-dump",
         "slug": "cmd-dump",
         "cmd_path": "cli\/cmd-dump",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/cmd-dump.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/cmd-dump.md"
     },
     "cli\/completions": {
         "title": "ee cli completions",
         "slug": "completions",
         "cmd_path": "cli\/completions",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/completions.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/completions.md"
     },
     "cli\/has-command": {
         "title": "ee cli has-command",
         "slug": "has-command",
         "cmd_path": "cli\/has-command",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/has-command.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/has-command.md"
     },
     "cli\/info": {
         "title": "ee cli info",
         "slug": "info",
         "cmd_path": "cli\/info",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/info.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/info.md"
     },
     "cli\/param-dump": {
         "title": "ee cli param-dump",
         "slug": "param-dump",
         "cmd_path": "cli\/param-dump",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/param-dump.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/param-dump.md"
     },
     "cli\/self-uninstall": {
         "title": "ee cli self-uninstall",
         "slug": "self-uninstall",
         "cmd_path": "cli\/self-uninstall",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/self-uninstall.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/self-uninstall.md"
     },
     "cli\/update": {
         "title": "ee cli update",
         "slug": "update",
         "cmd_path": "cli\/update",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/update.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/update.md"
     },
     "cli\/version": {
         "title": "ee cli version",
         "slug": "version",
         "cmd_path": "cli\/version",
         "parent": "cli",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cli\/version.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/version.md"
     },
     "cron\/add": {
         "title": "ee cron add",
         "slug": "add",
         "cmd_path": "cron\/add",
         "parent": "cron",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron\/add.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/add.md"
     },
     "cron\/delete": {
         "title": "ee cron delete",
         "slug": "delete",
         "cmd_path": "cron\/delete",
         "parent": "cron",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron\/delete.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/delete.md"
     },
     "cron\/list": {
         "title": "ee cron list",
         "slug": "list",
         "cmd_path": "cron\/list",
         "parent": "cron",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron\/list.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/list.md"
     },
     "cron\/run-now": {
         "title": "ee cron run-now",
         "slug": "run-now",
         "cmd_path": "cron\/run-now",
         "parent": "cron",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron\/run-now.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/run-now.md"
     },
     "cron\/update": {
         "title": "ee cron update",
         "slug": "update",
         "cmd_path": "cron\/update",
         "parent": "cron",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/cron\/update.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/update.md"
     },
     "handbook\/api-dump": {
         "title": "ee handbook api-dump",
         "slug": "api-dump",
         "cmd_path": "handbook\/api-dump",
         "parent": "handbook",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook\/api-dump.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/api-dump.md"
     },
     "handbook\/gen-all": {
         "title": "ee handbook gen-all",
         "slug": "gen-all",
         "cmd_path": "handbook\/gen-all",
         "parent": "handbook",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook\/gen-all.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/gen-all.md"
     },
     "handbook\/gen-commands-manifest": {
         "title": "ee handbook gen-commands-manifest",
         "slug": "gen-commands-manifest",
         "cmd_path": "handbook\/gen-commands-manifest",
         "parent": "handbook",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook\/gen-commands-manifest.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/gen-commands-manifest.md"
     },
     "handbook\/gen-commands": {
         "title": "ee handbook gen-commands",
         "slug": "gen-commands",
         "cmd_path": "handbook\/gen-commands",
         "parent": "handbook",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook\/gen-commands.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/gen-commands.md"
     },
     "handbook\/gen-hb-manifest": {
         "title": "ee handbook gen-hb-manifest",
         "slug": "gen-hb-manifest",
         "cmd_path": "handbook\/gen-hb-manifest",
         "parent": "handbook",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/handbook\/gen-hb-manifest.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/gen-hb-manifest.md"
     },
     "mailhog\/down": {
         "title": "ee mailhog down",
         "slug": "down",
         "cmd_path": "mailhog\/down",
         "parent": "mailhog",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/mailhog\/down.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/down.md"
     },
     "mailhog\/status": {
         "title": "ee mailhog status",
         "slug": "status",
         "cmd_path": "mailhog\/status",
         "parent": "mailhog",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/mailhog\/status.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/status.md"
     },
     "mailhog\/up": {
         "title": "ee mailhog up",
         "slug": "up",
         "cmd_path": "mailhog\/up",
         "parent": "mailhog",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/mailhog\/up.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/up.md"
     },
     "site\/create": {
         "title": "ee site create",
         "slug": "create",
         "cmd_path": "site\/create",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/create.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create.md"
     },
     "site\/delete": {
         "title": "ee site delete",
         "slug": "delete",
         "cmd_path": "site\/delete",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/delete.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/delete.md"
     },
     "site\/down": {
         "title": "ee site down",
         "slug": "down",
         "cmd_path": "site\/down",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/down.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/down.md"
     },
     "site\/info": {
         "title": "ee site info",
         "slug": "info",
         "cmd_path": "site\/info",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/info.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/info.md"
     },
     "site\/le": {
         "title": "ee site le",
         "slug": "le",
         "cmd_path": "site\/le",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/le.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/le.md"
     },
     "site\/list": {
         "title": "ee site list",
         "slug": "list",
         "cmd_path": "site\/list",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/list.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/list.md"
     },
     "site\/reload": {
         "title": "ee site reload",
         "slug": "reload",
         "cmd_path": "site\/reload",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/reload.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload.md"
     },
     "site\/restart": {
         "title": "ee site restart",
         "slug": "restart",
         "cmd_path": "site\/restart",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/restart.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart.md"
     },
     "site\/up": {
         "title": "ee site up",
         "slug": "up",
         "cmd_path": "site\/up",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/site\/up.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/up.md"
     },
     "wp\/create": {
         "title": "ee wp create",
         "slug": "create",
         "cmd_path": "wp\/create",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/create.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/create.md"
     },
     "wp\/delete": {
         "title": "ee wp delete",
         "slug": "delete",
         "cmd_path": "wp\/delete",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/delete.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/delete.md"
     },
     "wp\/down": {
         "title": "ee wp down",
         "slug": "down",
         "cmd_path": "wp\/down",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/down.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/down.md"
     },
     "wp\/info": {
         "title": "ee wp info",
         "slug": "info",
         "cmd_path": "wp\/info",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/info.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/info.md"
     },
     "wp\/le": {
         "title": "ee wp le",
         "slug": "le",
         "cmd_path": "wp\/le",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/le.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/le.md"
     },
     "wp\/list": {
         "title": "ee wp list",
         "slug": "list",
         "cmd_path": "wp\/list",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/list.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/list.md"
     },
     "wp\/reload": {
         "title": "ee wp reload",
         "slug": "reload",
         "cmd_path": "wp\/reload",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/reload.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/reload.md"
     },
     "wp\/restart": {
         "title": "ee wp restart",
         "slug": "restart",
         "cmd_path": "wp\/restart",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/restart.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/restart.md"
     },
     "wp\/up": {
         "title": "ee wp up",
         "slug": "up",
         "cmd_path": "wp\/up",
         "parent": "wp",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/easyengine.github.io\/blob\/master\/commands\/wp\/up.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp\/up.md"
     }
 }

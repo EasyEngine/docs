@@ -1,8 +1,10 @@
 # ee handbook gen-hb-manifest
 
-Generate a manifest document of all handbook pages
+Generate `bin/handbook-manifest.json` file from markdown in `handbook` directory.
 
+### EXAMPLES
 
+    $ ee handbook gen-hb-manifest
 
 ### GLOBAL PARAMETERS
 

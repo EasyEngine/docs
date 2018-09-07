@@ -1,8 +1,10 @@
 # ee handbook gen-all
 
-Regenerate all doc pages
+Generate markdowns for all commands, generate manifest for commands markdown and generate manifest for handbook.
 
+### EXAMPLES
 
+    $ ee handbook gen-all
 
 ### GLOBAL PARAMETERS
 

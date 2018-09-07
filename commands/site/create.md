@@ -1,17 +1,15 @@
 # ee site create
 
-Runs the standard WordPress site installation.
+Runs the standard WordPress Site installation.
 
 ### OPTIONS
 
 &lt;site-name&gt;
 : Name of website.
 
-[\--ssl=&lt;value&gt;]
+[\--letsencrypt]
 : Enables ssl via letsencrypt certificate.
 
-[\--wildcard]
-: Gets wildcard SSL .
 [\--type=&lt;type&gt;]
 : Type of the site to be created. Values: html,php,wp.
 

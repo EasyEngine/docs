@@ -78,7 +78,7 @@ class Handbook_Command extends EE_Command{
 		$repo_url   = '';
 		if ( 'help' === substr( $full, 0, 4 )
 			|| 'cli' === substr( $full, 0, 3 ) ) {
-			$repo_url = 'https://github.com/EasyEngine/easyengine.github.io';
+			$repo_url = 'https://github.com/EasyEngine/handbook';
 		}
 		if ( $reflection->hasProperty( 'when_invoked' ) ) {
 			$when_invoked = $reflection->getProperty( 'when_invoked' );
@@ -151,7 +151,7 @@ class Handbook_Command extends EE_Command{
 					'slug'            => $slug,
 					'cmd_path'        => $cmd_path,
 					'parent'          => $parent,
-					'markdown_source' => sprintf( 'https://github.com/EasyEngine/easyengine.github.io/blob/master/commands/%s.md', $cmd_path ),
+					'markdown_source' => sprintf( 'https://github.com/EasyEngine/handbook/blob/master/commands/%s.md', $cmd_path ),
 				);
 				if ( ! empty( $commands_data[ $title ] ) ) {
 					$manifest[ $cmd_path ] = array_merge( $manifest[ $cmd_path ], $commands_data[ $title ] );
@@ -200,7 +200,7 @@ class Handbook_Command extends EE_Command{
 					'slug'            => $slug,
 					'cmd_path'        => $cmd_path,
 					'parent'          => $parent,
-					'markdown_source' => sprintf( 'https://github.com/EasyEngine/easyengine.github.io/blob/master/handbook/%s.md', $cmd_path ),
+					'markdown_source' => sprintf( 'https://github.com/EasyEngine/handbook/blob/master/handbook/%s.md', $cmd_path ),
 				);
 				if ( ! empty( $commands_data[ $title ] ) ) {
 					$manifest[ $cmd_path ] = array_merge( $manifest[ $cmd_path ], $commands_data[ $title ] );

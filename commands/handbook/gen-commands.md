@@ -1,8 +1,10 @@
 # ee handbook gen-commands
 
-Generate command's markdown pages
+Generate markdown file for each ee command.
 
+### EXAMPLES
 
+    $ ee handbook gen-commands
 
 ### GLOBAL PARAMETERS
 

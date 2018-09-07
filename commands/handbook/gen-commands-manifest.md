@@ -1,8 +1,10 @@
 # ee handbook gen-commands-manifest
 
-Generate a manifest document of all command pages
+Generate `bin/commands-manifest.json` file from markdown in `commands` directory.
 
+### EXAMPLES
 
+    $ ee handbook gen-commands-manifest
 
 ### GLOBAL PARAMETERS
 

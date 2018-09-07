@@ -7,8 +7,12 @@ Runs the standard WordPress Site installation.
 &lt;site-name&gt;
 : Name of website.
 
+[\--wp]
+: WordPress website.
+
 [\--cache]
 : Use redis cache for WordPress.
+
 
 [\--mu=&lt;subdir&gt;]
 : WordPress sub-dir Multi-site.
@@ -19,13 +23,13 @@ Runs the standard WordPress Site installation.
 [\--title=&lt;title&gt;]
 : Title of your site.
 
-[\--admin-user=&lt;admin-user&gt;]
+[\--admin_user=&lt;admin_user&gt;]
 : Username of the administrator.
 
-[\--admin-pass=&lt;admin-pass&gt;]
+[\--admin_pass=&lt;admin_pass&gt;]
 : Password for the the administrator.
 
-[\--admin-email=&lt;admin-email&gt;]
+[\--admin_email=&lt;admin_email&gt;]
 : E-Mail of the administrator.
 
 [\--dbname=&lt;dbname&gt;]
@@ -62,7 +66,7 @@ default: utf8
 : If set, the database connection is not checked.
 
 [\--version=&lt;version&gt;]
-: Select which WordPress version you want to download. Accepts a version number, ‘latest’ or ‘nightly’.
+: Select which wordpress version you want to download. Accepts a version number, ‘latest’ or ‘nightly’.
 
 [\--skip-content]
 : Download WP without the default themes and plugins.
@@ -73,11 +77,8 @@ default: utf8
 [\--skip-status-check]
 : Skips site status check.
 
-[\--ssl=&lt;value&gt;]
-: Enables ssl on site.
-
-[\--wildcard]
-: Gets wildcard SSL .
+[\--letsencrypt]
+: Enables ssl via letsencrypt certificate.
 
 [\--force]
 : Resets the remote database if it is not empty.
