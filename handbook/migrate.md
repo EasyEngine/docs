@@ -12,10 +12,11 @@ NOTE: Throughout this doument, we refer to `sitename.ext` as name of site on old
 1. Create site on new server and pass appropriate [flags as required](https://github.com/easyengine/site-type-wp#ee-site-create---typewp)
 
 ```bash
-ee site create newsite.ext --type=wp #If we want site to be normal WP site (no mu or SSL)
-ee site create newsite.ext --type=wp --ssl=le #If we want site to be WP site with SSL
-ee site create newsite.ext --type=wp --mu=subdom #If we want non-ssl subdir MU WP site
-ee site create newsite.ext --type=wp --cache #If we want non-ssl WP cached site
+ee site create easyengine-io.blr.rtdemo.in --ssl=inherit --type=wp
+# ee site create newsite.ext --type=wp             # If we want site to be normal WP site (no mu or SSL)
+# ee site create newsite.ext --type=wp --ssl=le    # If we want site to be WP site with SSL
+# ee site create newsite.ext --type=wp --mu=subdom # If we want non-ssl subdir MU WP site
+# ee site create newsite.ext --type=wp --cache     # If we want non-ssl WP cached site
 
 Note: site will be created in `/opt/easyengine/sites/` directory.
 ```
@@ -25,9 +26,8 @@ Note: site will be created in `/opt/easyengine/sites/` directory.
 4. Rsync files from old server to new server.
 
 ```bash
-
-cd /opt/easyengine/sites/newsite.ext/app/src
-rsync -avP root@new-server-ip:/var/www/sitename.ext/htdocs/ .
+cd /opt/easyengine/sites/easyengine-io.blr.rtdemo.in/app/src
+rsync -avP --exclude=wp-config.php --exclude=wp-content/uploads root@aws.rtcamp.com:/var/www/easyengine.io/htdocs/ .rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/wp-config.php .  # Check if this needs to be done
 ```
 
 5. Import database from new site.
@@ -40,16 +40,22 @@ wp db import <filename>
 6. Run `search-replace` in `ee shell`
 
 ```
-wp search-replace sitename.ext newsite.ext --all-tables
+wp search-replace easyengine.io easyengine-io.blr.rtdemo.in --all-tables --precise
 
-#If the site has SSL, run the below comannd(after removing the hash ofcourse)
-#wp search-replace http://newsite.ext https://newsite.ext --all-tables
+# If the site has SSL, add below line
+wp search-replace http://easyengine-io.blr.rtdemo.in https://easyengine-io.blr.rtdemo.in --all-tables --precise
 ```
 
-7. Run `sed -i '0,/WP_ALLOW_MULTISITE/{/WP_ALLOW_MULTISITE/d;}' wp-config.php`
+7. Run the following which ensures `WP_ALLOW_MULTISITE` is not repeted in `wp-config.php`(This happens due to a bug in ee3)
+
+```bash
+sed -i '0,/WP_ALLOW_MULTISITE/{/WP_ALLOW_MULTISITE/d;}' wp-config.php
+```
+
 8. Fill Appropriate values in new `wp-config.php` from backup.
 9. Change owner of files
 
 ```bash
-cd /opt/easyengine/sites/example.com/app/src
-chown -R www-data:www-data .```
+cd /opt/easyengine/sites/easyengine-io.blr.rtdemo.in/app/src
+chown -R www-data:www-data .
+```
