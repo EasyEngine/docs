@@ -25,7 +25,7 @@ Note: site will be created in `/opt/easyengine/sites/` directory.
 wp db export
 ```
 
-4. Rsync files from old server to new server.
+3. Rsync files from old server to new server.
 
 ```bash
 cd /opt/easyengine/sites/easyengine-io.blr.rtdemo.in/app/src
@@ -36,16 +36,16 @@ rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/htdocs/wp-content/uploads/
 rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/wp-config.php wp-config-old.php
 ```
 
-5. Fill Appropriate values in `wp-config.php` from `wp-config-old.php`.
+4. Fill Appropriate values in `wp-config.php` from `wp-config-old.php`.
 
-6. Import database from new site.
+5. Import database from new site.
 
 ```bash
 ee shell
 wp db import <filename>
 ```
 
-7. Run `search-replace` in `ee shell`
+6. Run `search-replace` in `ee shell`
 
 ```
 wp search-replace easyengine.io easyengine-io.blr.rtdemo.in --all-tables --precise
@@ -54,13 +54,13 @@ wp search-replace easyengine.io easyengine-io.blr.rtdemo.in --all-tables --preci
 wp search-replace http://easyengine-io.blr.rtdemo.in https://easyengine-io.blr.rtdemo.in --all-tables --precise
 ```
 
-8. Run the following which ensures `WP_ALLOW_MULTISITE` is not repeted in `wp-config.php`(This happens due to a bug in ee3)
+7. Run the following which ensures `WP_ALLOW_MULTISITE` is not repeted in `wp-config.php`(This happens due to a bug in ee3)
 
 ```bash
 sed -i '0,/WP_ALLOW_MULTISITE/{/WP_ALLOW_MULTISITE/d;}' wp-config.php
 ```
 
-9. Change owner of files
+8. Change owner of files
 
 ```bash
 cd /opt/easyengine/sites/easyengine-io.blr.rtdemo.in/app/src
