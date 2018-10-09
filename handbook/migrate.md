@@ -19,23 +19,24 @@ ee site create easyengine-io.blr.rtdemo.in --ssl=inherit --type=wp
 Note: site will be created in `/opt/easyengine/sites/` directory.
 ```
 
-2. Take bakup of database on old server.
+2. Take backup of database on old server.
 
 ```bash
 wp db export
 ```
 
-3. Take backup of `wp-config.php` on new server.
 4. Rsync files from old server to new server.
 
 ```bash
 cd /opt/easyengine/sites/easyengine-io.blr.rtdemo.in/app/src
 rsync -avP --exclude=wp-config.php --exclude=wp-content/uploads root@aws.rtcamp.com:/var/www/easyengine.io/htdocs/ .
 rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/htdocs/wp-content/uploads/2018/ wp-content/uploads/2018/
-rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/wp-config.php .  # Check if this needs to be done
+
+# Copy wp-config from old server
+rsync -avP root@aws.rtcamp.com:/var/www/easyengine.io/wp-config.php wp-config-old.php
 ```
 
-5. Fill Appropriate values in new `wp-config.php` from backup.
+5. Fill Appropriate values in `wp-config.php` from `wp-config-old.php`.
 
 6. Import database from new site.
 
