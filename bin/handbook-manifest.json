@@ -33,5 +33,12 @@
         "cmd_path": "handbook-doc",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/handbook-doc.md"
+    },
+    "migrate": {
+        "title": "EE3 to EE4 manual migration steps (To another server)",
+        "slug": "migrate",
+        "cmd_path": "migrate",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/migrate.md"
     }
 }
