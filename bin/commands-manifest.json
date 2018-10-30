@@ -76,6 +76,27 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site.md"
     },
+    "site_type_html": {
+        "title": "ee site_type_html",
+        "slug": "site_type_html",
+        "cmd_path": "site_type_html",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html.md"
+    },
+    "site_type_php": {
+        "title": "ee site_type_php",
+        "slug": "site_type_php",
+        "cmd_path": "site_type_php",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php.md"
+    },
+    "site_type_wp": {
+        "title": "ee site_type_wp",
+        "slug": "site_type_wp",
+        "cmd_path": "site_type_wp",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp.md"
+    },
     "admin-tools\/disable": {
         "title": "ee admin-tools disable",
         "slug": "disable",
@@ -327,5 +348,299 @@
         "cmd_path": "service\/restart",
         "parent": "service",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/restart.md"
+    },
+    "site\/create --type=html": {
+        "title": "ee site create --type=html",
+        "slug": "create --type=html",
+        "cmd_path": "site\/create --type=html",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=html.md"
+    },
+    "site\/create --type=php": {
+        "title": "ee site create --type=php",
+        "slug": "create --type=php",
+        "cmd_path": "site\/create --type=php",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=php.md"
+    },
+    "site\/create --type=wp": {
+        "title": "ee site create --type=wp",
+        "slug": "create --type=wp",
+        "cmd_path": "site\/create --type=wp",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=wp.md"
+    },
+    "site\/delete": {
+        "title": "ee site delete",
+        "slug": "delete",
+        "cmd_path": "site\/delete",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/delete.md"
+    },
+    "site\/disable": {
+        "title": "ee site disable",
+        "slug": "disable",
+        "cmd_path": "site\/disable",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/disable.md"
+    },
+    "site\/enable": {
+        "title": "ee site enable",
+        "slug": "enable",
+        "cmd_path": "site\/enable",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/enable.md"
+    },
+    "site\/info": {
+        "title": "ee site info",
+        "slug": "info",
+        "cmd_path": "site\/info",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/info.md"
+    },
+    "site\/list": {
+        "title": "ee site list",
+        "slug": "list",
+        "cmd_path": "site\/list",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/list.md"
+    },
+    "site\/reload --type=html": {
+        "title": "ee site reload --type=html",
+        "slug": "reload --type=html",
+        "cmd_path": "site\/reload --type=html",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=html.md"
+    },
+    "site\/reload --type=php": {
+        "title": "ee site reload --type=php",
+        "slug": "reload --type=php",
+        "cmd_path": "site\/reload --type=php",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=php.md"
+    },
+    "site\/reload --type=wp": {
+        "title": "ee site reload --type=wp",
+        "slug": "reload --type=wp",
+        "cmd_path": "site\/reload --type=wp",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=wp.md"
+    },
+    "site\/restart --type=html": {
+        "title": "ee site restart --type=html",
+        "slug": "restart --type=html",
+        "cmd_path": "site\/restart --type=html",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=html.md"
+    },
+    "site\/restart --type=php": {
+        "title": "ee site restart --type=php",
+        "slug": "restart --type=php",
+        "cmd_path": "site\/restart --type=php",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=php.md"
+    },
+    "site\/restart --type=wp": {
+        "title": "ee site restart --type=wp",
+        "slug": "restart --type=wp",
+        "cmd_path": "site\/restart --type=wp",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=wp.md"
+    },
+    "site\/ssl": {
+        "title": "ee site ssl",
+        "slug": "ssl",
+        "cmd_path": "site\/ssl",
+        "parent": "site",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/ssl.md"
+    },
+    "site_type_html\/create": {
+        "title": "ee site_type_html create",
+        "slug": "create",
+        "cmd_path": "site_type_html\/create",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/create.md"
+    },
+    "site_type_html\/delete": {
+        "title": "ee site_type_html delete",
+        "slug": "delete",
+        "cmd_path": "site_type_html\/delete",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/delete.md"
+    },
+    "site_type_html\/disable": {
+        "title": "ee site_type_html disable",
+        "slug": "disable",
+        "cmd_path": "site_type_html\/disable",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/disable.md"
+    },
+    "site_type_html\/enable": {
+        "title": "ee site_type_html enable",
+        "slug": "enable",
+        "cmd_path": "site_type_html\/enable",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/enable.md"
+    },
+    "site_type_html\/info": {
+        "title": "ee site_type_html info",
+        "slug": "info",
+        "cmd_path": "site_type_html\/info",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/info.md"
+    },
+    "site_type_html\/list": {
+        "title": "ee site_type_html list",
+        "slug": "list",
+        "cmd_path": "site_type_html\/list",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/list.md"
+    },
+    "site_type_html\/reload": {
+        "title": "ee site_type_html reload",
+        "slug": "reload",
+        "cmd_path": "site_type_html\/reload",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/reload.md"
+    },
+    "site_type_html\/restart": {
+        "title": "ee site_type_html restart",
+        "slug": "restart",
+        "cmd_path": "site_type_html\/restart",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/restart.md"
+    },
+    "site_type_html\/ssl": {
+        "title": "ee site_type_html ssl",
+        "slug": "ssl",
+        "cmd_path": "site_type_html\/ssl",
+        "parent": "site_type_html",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_html\/ssl.md"
+    },
+    "site_type_php\/create": {
+        "title": "ee site_type_php create",
+        "slug": "create",
+        "cmd_path": "site_type_php\/create",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/create.md"
+    },
+    "site_type_php\/delete": {
+        "title": "ee site_type_php delete",
+        "slug": "delete",
+        "cmd_path": "site_type_php\/delete",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/delete.md"
+    },
+    "site_type_php\/disable": {
+        "title": "ee site_type_php disable",
+        "slug": "disable",
+        "cmd_path": "site_type_php\/disable",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/disable.md"
+    },
+    "site_type_php\/enable": {
+        "title": "ee site_type_php enable",
+        "slug": "enable",
+        "cmd_path": "site_type_php\/enable",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/enable.md"
+    },
+    "site_type_php\/info": {
+        "title": "ee site_type_php info",
+        "slug": "info",
+        "cmd_path": "site_type_php\/info",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/info.md"
+    },
+    "site_type_php\/list": {
+        "title": "ee site_type_php list",
+        "slug": "list",
+        "cmd_path": "site_type_php\/list",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/list.md"
+    },
+    "site_type_php\/reload": {
+        "title": "ee site_type_php reload",
+        "slug": "reload",
+        "cmd_path": "site_type_php\/reload",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/reload.md"
+    },
+    "site_type_php\/restart": {
+        "title": "ee site_type_php restart",
+        "slug": "restart",
+        "cmd_path": "site_type_php\/restart",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/restart.md"
+    },
+    "site_type_php\/ssl": {
+        "title": "ee site_type_php ssl",
+        "slug": "ssl",
+        "cmd_path": "site_type_php\/ssl",
+        "parent": "site_type_php",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_php\/ssl.md"
+    },
+    "site_type_wp\/create": {
+        "title": "ee site_type_wp create",
+        "slug": "create",
+        "cmd_path": "site_type_wp\/create",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/create.md"
+    },
+    "site_type_wp\/delete": {
+        "title": "ee site_type_wp delete",
+        "slug": "delete",
+        "cmd_path": "site_type_wp\/delete",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/delete.md"
+    },
+    "site_type_wp\/disable": {
+        "title": "ee site_type_wp disable",
+        "slug": "disable",
+        "cmd_path": "site_type_wp\/disable",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/disable.md"
+    },
+    "site_type_wp\/enable": {
+        "title": "ee site_type_wp enable",
+        "slug": "enable",
+        "cmd_path": "site_type_wp\/enable",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/enable.md"
+    },
+    "site_type_wp\/info": {
+        "title": "ee site_type_wp info",
+        "slug": "info",
+        "cmd_path": "site_type_wp\/info",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/info.md"
+    },
+    "site_type_wp\/list": {
+        "title": "ee site_type_wp list",
+        "slug": "list",
+        "cmd_path": "site_type_wp\/list",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/list.md"
+    },
+    "site_type_wp\/reload": {
+        "title": "ee site_type_wp reload",
+        "slug": "reload",
+        "cmd_path": "site_type_wp\/reload",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/reload.md"
+    },
+    "site_type_wp\/restart": {
+        "title": "ee site_type_wp restart",
+        "slug": "restart",
+        "cmd_path": "site_type_wp\/restart",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/restart.md"
+    },
+    "site_type_wp\/ssl": {
+        "title": "ee site_type_wp ssl",
+        "slug": "ssl",
+        "cmd_path": "site_type_wp\/ssl",
+        "parent": "site_type_wp",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site_type_wp\/ssl.md"
     }
 }

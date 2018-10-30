@@ -40,7 +40,7 @@ class Handbook_Command extends EE_Command{
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$ee = self::invoke_ee( 'cli cmd-dump' );
+		$ee = self::invoke_ee( 'site cmd-dump' );
 
 		$bundled_cmds = array();
 		foreach ( $ee['subcommands'] as $k => $cmd ) {
