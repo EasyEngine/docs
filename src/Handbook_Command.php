@@ -55,7 +55,7 @@ class Handbook_Command extends EE_Command{
 			self::gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
-		$ee_with_packages = self::invoke_ee( 'cli cmd-dump' );
+		$ee_with_packages = self::invoke_ee( 'site cmd-dump' );
 		foreach ( $ee_with_packages['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) )
 				|| in_array( $cmd['name'], $bundled_cmds ) ) {
