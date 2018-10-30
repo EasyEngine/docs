@@ -1,34 +1,8 @@
-# ee auth list
+# ee auth update_whitelist
 
-Lists http authentication users of a site.
+Update whitelist IPs
 
-### OPTIONS
 
-[&lt;site-name&gt;]
-: Name of website / `global` for global scope.
-
-[\--ip]
-: Show whitelisted IPs of site.
-
-[\--format=&lt;format&gt;]
-: Render output in a particular format.
-\---
-default: table
-options:
-  - table
-  - csv
-  - yaml
-  - json
-  - count
-\---
-
-### EXAMPLES
-
-    # List all auth on site
-    $ ee auth list example.com
-
-    # List all global auth
-    $ ee auth list global
 
 ### GLOBAL PARAMETERS
 

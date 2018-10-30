@@ -1,34 +1,16 @@
-# ee auth list
+# ee service enable
 
-Lists http authentication users of a site.
+Starts global services.
 
 ### OPTIONS
 
-[&lt;site-name&gt;]
-: Name of website / `global` for global scope.
-
-[\--ip]
-: Show whitelisted IPs of site.
-
-[\--format=&lt;format&gt;]
-: Render output in a particular format.
-\---
-default: table
-options:
-  - table
-  - csv
-  - yaml
-  - json
-  - count
-\---
+&lt;service-name&gt;
+: Name of service.
 
 ### EXAMPLES
 
-    # List all auth on site
-    $ ee auth list example.com
-
-    # List all global auth
-    $ ee auth list global
+    # Enable global service
+    $ ee service enable nginx-proxy
 
 ### GLOBAL PARAMETERS
 

@@ -20,6 +20,13 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli.md"
     },
+    "config": {
+        "title": "ee config",
+        "slug": "config",
+        "cmd_path": "config",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/config.md"
+    },
     "cron": {
         "title": "ee cron",
         "slug": "cron",
@@ -48,6 +55,13 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog.md"
     },
+    "service": {
+        "title": "ee service",
+        "slug": "service",
+        "cmd_path": "service",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service.md"
+    },
     "shell": {
         "title": "ee shell",
         "slug": "shell",
@@ -69,12 +83,26 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/wp.md"
     },
+    "admin-tools\/disable": {
+        "title": "ee admin-tools disable",
+        "slug": "disable",
+        "cmd_path": "admin-tools\/disable",
+        "parent": "admin-tools",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/disable.md"
+    },
     "admin-tools\/down": {
         "title": "ee admin-tools down",
         "slug": "down",
         "cmd_path": "admin-tools\/down",
         "parent": "admin-tools",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/down.md"
+    },
+    "admin-tools\/enable": {
+        "title": "ee admin-tools enable",
+        "slug": "enable",
+        "cmd_path": "admin-tools\/enable",
+        "parent": "admin-tools",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/admin-tools\/enable.md"
     },
     "admin-tools\/install": {
         "title": "ee admin-tools install",
@@ -110,6 +138,27 @@
         "cmd_path": "auth\/list",
         "parent": "auth",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/list.md"
+    },
+    "auth\/update": {
+        "title": "ee auth update",
+        "slug": "update",
+        "cmd_path": "auth\/update",
+        "parent": "auth",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/update.md"
+    },
+    "auth\/update_auth": {
+        "title": "ee auth update_auth",
+        "slug": "update_auth",
+        "cmd_path": "auth\/update_auth",
+        "parent": "auth",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/update_auth.md"
+    },
+    "auth\/update_whitelist": {
+        "title": "ee auth update_whitelist",
+        "slug": "update_whitelist",
+        "cmd_path": "auth\/update_whitelist",
+        "parent": "auth",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/auth\/update_whitelist.md"
     },
     "auth\/whitelist": {
         "title": "ee auth whitelist",
@@ -188,12 +237,33 @@
         "parent": "cli",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cli\/version.md"
     },
+    "config\/get": {
+        "title": "ee config get",
+        "slug": "get",
+        "cmd_path": "config\/get",
+        "parent": "config",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/config\/get.md"
+    },
+    "config\/set": {
+        "title": "ee config set",
+        "slug": "set",
+        "cmd_path": "config\/set",
+        "parent": "config",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/config\/set.md"
+    },
     "cron\/add": {
         "title": "ee cron add",
         "slug": "add",
         "cmd_path": "cron\/add",
         "parent": "cron",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/add.md"
+    },
+    "cron\/create": {
+        "title": "ee cron create",
+        "slug": "create",
+        "cmd_path": "cron\/create",
+        "parent": "cron",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/cron\/create.md"
     },
     "cron\/delete": {
         "title": "ee cron delete",
@@ -258,12 +328,26 @@
         "parent": "handbook",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/handbook\/gen-hb-manifest.md"
     },
+    "mailhog\/disable": {
+        "title": "ee mailhog disable",
+        "slug": "disable",
+        "cmd_path": "mailhog\/disable",
+        "parent": "mailhog",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/disable.md"
+    },
     "mailhog\/down": {
         "title": "ee mailhog down",
         "slug": "down",
         "cmd_path": "mailhog\/down",
         "parent": "mailhog",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/down.md"
+    },
+    "mailhog\/enable": {
+        "title": "ee mailhog enable",
+        "slug": "enable",
+        "cmd_path": "mailhog\/enable",
+        "parent": "mailhog",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/enable.md"
     },
     "mailhog\/status": {
         "title": "ee mailhog status",
@@ -278,6 +362,34 @@
         "cmd_path": "mailhog\/up",
         "parent": "mailhog",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/mailhog\/up.md"
+    },
+    "service\/disable": {
+        "title": "ee service disable",
+        "slug": "disable",
+        "cmd_path": "service\/disable",
+        "parent": "service",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/disable.md"
+    },
+    "service\/enable": {
+        "title": "ee service enable",
+        "slug": "enable",
+        "cmd_path": "service\/enable",
+        "parent": "service",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/enable.md"
+    },
+    "service\/reload": {
+        "title": "ee service reload",
+        "slug": "reload",
+        "cmd_path": "service\/reload",
+        "parent": "service",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/reload.md"
+    },
+    "service\/restart": {
+        "title": "ee service restart",
+        "slug": "restart",
+        "cmd_path": "service\/restart",
+        "parent": "service",
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/restart.md"
     },
     "site\/create": {
         "title": "ee site create",

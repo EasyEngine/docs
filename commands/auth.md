@@ -1,6 +1,6 @@
 # ee auth
 
-Adds HTTP auth to a site.
+Configure HTTP Authentication and whitelisting for EasyEngine site
 
 ### EXAMPLES
 

@@ -7,6 +7,11 @@ Outputs status of mailhog for a site.
 [&lt;site-name&gt;]
 : Name of website to know mailhog status for.
 
+### EXAMPLES
+
+    # Check mailhog status on site
+    $ ee mailhog status example.com
+
 ### GLOBAL PARAMETERS
 
 | **Argument**    | **Description**              |

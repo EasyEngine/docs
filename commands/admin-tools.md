@@ -1,10 +1,7 @@
 # ee admin-tools
 
-Enables/Disables admin-tools on a site.
+Manages admin-tools on a site.
 
-### EXAMPLES
 
-    # Enable admin tools on site
-    $ ee admin-tools up example.com
 
 

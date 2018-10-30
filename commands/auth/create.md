@@ -1,17 +1,34 @@
 # ee auth create
 
-Creates/Updates http auth for a site.
+Creates http authentication for a site.
 
 ### OPTIONS
 
 [&lt;site-name&gt;]
-: Name of website to be secured.
+: Name of website / `global` for global scope.
 
 [\--user=&lt;user&gt;]
 : Username for http auth.
 
 [\--pass=&lt;pass&gt;]
-: Password for http auth
+: Password for http auth.
+
+[\--ip=&lt;ip&gt;]
+: IP to whitelist.
+
+### EXAMPLES
+
+    # Add auth on site with default username(easyengine) and random password
+    $ ee auth create example.com
+
+    # Add auth on all sites with default username and random password
+    $ ee auth create global
+
+    # Add auth on site with predefined username and password
+    $ ee auth create example.com --user=test --pass=password
+
+    # Add auth on site with default username and random password
+    $ ee auth create example.com --pass=password
 
 ### GLOBAL PARAMETERS
 

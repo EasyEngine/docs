@@ -1,16 +1,28 @@
 # ee auth delete
 
-Deletes http auth for a site. Default: removes http auth from site. If `--user` is passed it removes that
-
-specific user.
+Deletes http authentication for a site. Default: removes http authentication from site. If `--user` is passed it removes that specific user.
 
 ### OPTIONS
 
 [&lt;site-name&gt;]
-: Name of website.
+: Name of website / `global` for global scope.
 
 [\--user=&lt;user&gt;]
 : Username that needs to be deleted.
+
+[\--ip=&lt;ip&gt;]
+: IP to whitelist.
+
+### EXAMPLES
+
+    # Remove auth on site and its admin tools with default username(easyengine)
+    $ ee auth delete example.com
+
+    # Remove auth on site and its admin tools with custom username
+    $ ee auth delete example.com --user=example
+
+    # Remove global auth on all sites (but not admin tools) with default username(easyengine)
+    $ ee auth delete example.com --site
 
 ### GLOBAL PARAMETERS
 

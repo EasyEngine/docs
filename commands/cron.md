@@ -1,6 +1,6 @@
 # ee cron
 
-Manages cron on easyengine.
+Manages cron on easyengine sites and host machine.
 
 
 

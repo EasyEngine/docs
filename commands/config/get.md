@@ -1,34 +1,16 @@
-# ee auth list
+# ee config get
 
-Lists http authentication users of a site.
+Set a config value
 
 ### OPTIONS
 
-[&lt;site-name&gt;]
-: Name of website / `global` for global scope.
-
-[\--ip]
-: Show whitelisted IPs of site.
-
-[\--format=&lt;format&gt;]
-: Render output in a particular format.
-\---
-default: table
-options:
-  - table
-  - csv
-  - yaml
-  - json
-  - count
-\---
+&lt;config-key&gt;
+: Name of config value to get
 
 ### EXAMPLES
 
-    # List all auth on site
-    $ ee auth list example.com
-
-    # List all global auth
-    $ ee auth list global
+    # Get value from config
+    $ ee config get le-mail
 
 ### GLOBAL PARAMETERS
 

@@ -1,34 +1,22 @@
-# ee auth list
+# ee admin-tools disable
 
-Lists http authentication users of a site.
+Disables admin-tools on given site.
 
 ### OPTIONS
 
 [&lt;site-name&gt;]
-: Name of website / `global` for global scope.
+: Name of website to disable admin-tools on.
 
-[\--ip]
-: Show whitelisted IPs of site.
-
-[\--format=&lt;format&gt;]
-: Render output in a particular format.
-\---
-default: table
-options:
-  - table
-  - csv
-  - yaml
-  - json
-  - count
-\---
+[\--force]
+: Force disabling of admin-tools for a site.
 
 ### EXAMPLES
 
-    # List all auth on site
-    $ ee auth list example.com
+    # Disable admin tools on site
+    $ ee admin-tools disable example.com
 
-    # List all global auth
-    $ ee auth list global
+    # Force disable admin tools on site
+    $ ee admin-tools disable example.com --force
 
 ### GLOBAL PARAMETERS
 

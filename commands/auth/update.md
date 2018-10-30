@@ -1,37 +1,28 @@
-# ee shell
+# ee auth update
 
-Brings up a shell to run wp-cli, composer etc.
+Updates http authentication password for a site.
 
 ### OPTIONS
 
 [&lt;site-name&gt;]
-: Name of website to run shell on.
+: Name of website / `global` for global auth.
 
 [\--user=&lt;user&gt;]
-: Set the user to exec into shell.
+: Username for http auth.
 
-[\--service=&lt;service&gt;]
-: Set the service whose shell you want.
-\---
-default: php
-\---
+[\--pass=&lt;pass&gt;]
+: Password for http auth.
 
-[\--command=&lt;command&gt;]
-: Command to non-interactively run in the shell.
+[\--ip=&lt;ip&gt;]
+: IP to whitelist.
 
- ## EXAMPLES
+### EXAMPLES
 
-    # Open shell for site
-    $ ee shell example.com
+    # Update auth password on global auth with default username and random password
+    $ ee auth update global --user=easyengine
 
-    # Open shell with root user
-    $ ee shell example.com --user=root
-
-    # Open shell for some other service
-    $ ee shell example.com --service=nginx
-
-    # Run command non-interactively
-    $ ee shell example.com --service=nginx --command='nginx -t &amp;&amp; nginx -s reload'
+    # Update auth password on site with predefined username and password
+    $ ee auth update example.com --user=test --pass=password
 
 ### GLOBAL PARAMETERS
 
