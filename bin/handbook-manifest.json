@@ -1,11 +1,4 @@
 {
-    "admin-tools-command": {
-        "title": "admin-tools",
-        "slug": "admin-tools-command",
-        "cmd_path": "admin-tools-command",
-        "parent": null,
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/admin-tools-command.md"
-    },
     "buil-and-release": {
         "title": "Build and Release Process",
         "slug": "buil-and-release",
