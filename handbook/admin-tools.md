@@ -1,6 +1,6 @@
 # Admin Tools in EasyEngine v4
 
-In EasyEngine v4, we have support for following tools to help site administrators:
+In EasyEngine v4, we have support for following tools to help site administrators. These admin-tools needs to be enabled/disabled per site:
 
  * [opcache-gui](#opcache-gui)
  * [phpinfo](#phpinfo)
@@ -35,6 +35,8 @@ On the login screen, you need to add credentials. You can find the credentials b
 ee site info example.com
 +--------------------+--------------------------------+
 | Site               | https://example.com            |
++--------------------+--------------------------------+
+| Access admin-tools | https://example.com/ee-admin/  |
 +--------------------+--------------------------------+
 | Site Title         | example.com                    |
 +--------------------+--------------------------------+
@@ -81,4 +83,6 @@ To use mailhog, first of all, you'll have to enable it:
 ee mailhog enable example.com
 ```
 
-Then open `example.com/ee-admin/mailhog` in browser.
+Then open `example.com/ee-admin/mailhog` in browser. Also please remember to disable mailhog after it's need is over or your site will not be able to send emails.
+
+Please note mailhog should only be enabled only on development sites and not on production.
