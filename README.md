@@ -21,7 +21,7 @@ Alternatively, is to create a new issue in this repo with details such as:
 2. Mention the wrong part (screenshot is also fine)
 3. Mention the correct part (optional)
 
-### Handbook reference 
+### Handbook  
 
 EasyEngine v4 has a lot to it. The docker magic, new filesystem layouts a lot more. This is a part which is independent of any command.
 
