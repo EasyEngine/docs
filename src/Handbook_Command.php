@@ -9,11 +9,9 @@
  *
  * @package ee-handbook
  */
-
 define( 'EE_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
 
-class Handbook_Command extends EE_Command{
-
+class Handbook_Command extends EE_Command {
 	/**
 	 * Generate markdowns for all commands, generate manifest for commands markdown and generate manifest for handbook.
 	 *
@@ -40,8 +38,7 @@ class Handbook_Command extends EE_Command{
 	 * @subcommand gen-commands
 	 */
 	public function gen_commands() {
-		$ee = self::invoke_ee( 'site cmd-dump' );
-
+		$ee           = self::invoke_ee( 'site cmd-dump' );
 		$bundled_cmds = array();
 		foreach ( $ee['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) ) ) {
@@ -58,7 +55,7 @@ class Handbook_Command extends EE_Command{
 		$ee_with_packages = self::invoke_ee( 'site cmd-dump' );
 		foreach ( $ee_with_packages['subcommands'] as $k => $cmd ) {
 			if ( in_array( $cmd['name'], array( 'website', 'api-dump' ) )
-				|| in_array( $cmd['name'], $bundled_cmds ) ) {
+			     || in_array( $cmd['name'], $bundled_cmds ) ) {
 				unset( $ee_with_packages['subcommands'][ $k ] );
 			}
 		}
@@ -77,7 +74,7 @@ class Handbook_Command extends EE_Command{
 		$reflection = new \ReflectionClass( $command );
 		$repo_url   = '';
 		if ( 'help' === substr( $full, 0, 4 )
-			|| 'cli' === substr( $full, 0, 3 ) ) {
+		     || 'cli' === substr( $full, 0, 3 ) ) {
 			$repo_url = 'https://github.com/EasyEngine/handbook';
 		}
 		if ( $reflection->hasProperty( 'when_invoked' ) ) {
@@ -86,7 +83,6 @@ class Handbook_Command extends EE_Command{
 			$closure            = $when_invoked->getValue( $command );
 			$closure_reflection = new \ReflectionFunction( $closure );
 			$static             = $closure_reflection->getStaticVariables();
-
 			if ( isset( $static['callable'][0] ) ) {
 				$reflection_class = new \ReflectionClass( $static['callable'][0] );
 				$filename         = $reflection_class->getFileName();
@@ -128,9 +124,9 @@ class Handbook_Command extends EE_Command{
 			EE_HANDBOOK_PATH . '/commands/*/*/*.md',
 		);
 		$commands_data = array();
-		 foreach( EE::get_root_command()->get_subcommands() as $command ) {
-		 	self::update_commands_data( $command, $commands_data, '' );
-		 }
+		foreach ( EE::get_root_command()->get_subcommands() as $command ) {
+			self::update_commands_data( $command, $commands_data, '' );
+		}
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
@@ -212,7 +208,7 @@ class Handbook_Command extends EE_Command{
 		EE::success( "Generated handbook-manifest.json" );
 	}
 
-	private static function gen_cmd_pages( $cmd, $parent = array() ) {
+	private static function gen_cmd_pages( $cmd, $parent = array(), $skip_global = false, $return_str = false ) {
 		$parent[] = $cmd['name'];
 		static $params;
 		if ( ! isset( $params ) ) {
@@ -225,7 +221,7 @@ class Handbook_Command extends EE_Command{
 		$binding['breadcrumbs'] = '[Commands](' . $path . ')';
 		foreach ( $parent as $i => $p ) {
 			$path .= $p . '/';
-			if ( $i < ( count( $parent ) - 1 ) ) {
+			if ( $i < ( count( $parent ) -1 ) ) {
 				$binding['breadcrumbs'] .= " &raquo; [{$p}]({$path})";
 			} else {
 				$binding['breadcrumbs'] .= " &raquo; {$p}";
@@ -258,7 +254,7 @@ class Handbook_Command extends EE_Command{
 					continue;
 				}
 				if ( preg_match( '#([\w\(\)\.\,\;]|[`]{1})$#', $bits[ $i ] )
-					&& preg_match( '#^([\w\(\)\.\,\;`]|\\\--[\w]|[`]{1})#', $bits[ $i + 1 ] ) ) {
+				     && preg_match( '#^([\w\(\)\.\,\;`]|\\\--[\w]|[`]{1})#', $bits[ $i + 1 ] ) ) {
 					$bits[ $i ] .= ' ' . $bits[ $i + 1 ];
 					unset( $bits[ $i + 1 ] );
 					--$i;
@@ -279,8 +275,8 @@ class Handbook_Command extends EE_Command{
 EOT;
 			foreach ( $params as $param => $meta ) {
 				if ( false === $meta['runtime']
-					|| empty( $meta['desc'] )
-					|| ! empty( $meta['deprecated'] ) ) {
+				     || empty( $meta['desc'] )
+				     || ! empty( $meta['deprecated'] ) ) {
 					continue;
 				}
 				$param_arg = '--' . $param;
@@ -292,11 +288,15 @@ EOT;
 				}
 				$global_parameters .= PHP_EOL . '| `' . str_replace( '|', '\\|', $param_arg ) . '` | ' . str_replace( '|', '\\|', $meta['desc'] ) . ' |';
 			}
-			// Replace Global parameters with a nice table
-			if ( $binding['has-subcommands'] ) {
+			if ( $skip_global ) {
 				$replace_global = '';
 			} else {
-				$replace_global = '$1' . PHP_EOL . PHP_EOL . $global_parameters;
+				// Replace Global parameters with a nice table.
+				if ( $binding['has-subcommands'] ) {
+					$replace_global = '';
+				} else {
+					$replace_global = '$1' . PHP_EOL . PHP_EOL . $global_parameters;
+				}
 			}
 			$docs            = preg_replace( '/(#?## GLOBAL PARAMETERS).+/s', $replace_global, $docs );
 			$binding['docs'] = $docs;
@@ -305,12 +305,39 @@ EOT;
 		if ( ! is_dir( dirname( $path ) ) ) {
 			mkdir( dirname( $path ) );
 		}
+		$markdown_doc = self::render( 'subcmd-list.mustache', $binding );
+		if ( $return_str ) {
+			return $markdown_doc;
+		}
 		file_put_contents( "$path.md", self::render( 'subcmd-list.mustache', $binding ) );
 		EE::log( 'Generated /commands/' . $binding['path'] . '/' );
-		if ( ! isset( $cmd['subcommands'] ) )
+		if ( ! isset( $cmd['subcommands'] ) ) {
 			return;
+		}
+		$bundle_command = [];
 		foreach ( $cmd['subcommands'] as $subcmd ) {
-			self::gen_cmd_pages( $subcmd, $parent );
+			if ( strpos( $subcmd['name'], ' --type=' ) !== false ) {
+				$command_name                         = explode( ' --type=', $subcmd['name'] );
+				$bundle_command[ $command_name[0] ][] = $subcmd;
+			} else {
+				self::gen_cmd_pages( $subcmd, $parent );
+			}
+		}
+		foreach ( $bundle_command as $name => $command ) {
+			$pop    = array_pop( $bundle_command[ $name ] );
+			$md_doc = '';
+			foreach ( $command as $subcommand ) {
+				if ( $pop['name'] === $subcommand['name'] ) {
+					$md_doc .= self::gen_cmd_pages( $subcommand, $parent, false, true );
+					$path   = dirname( __DIR__ ) . "/commands/" . implode( '/', $parent ) . "/$name";
+					if ( ! is_dir( dirname( $path ) ) ) {
+						mkdir( dirname( $path ) );
+					}
+					file_put_contents( "$path.md", $md_doc );
+				} else {
+					$md_doc .= self::gen_cmd_pages( $subcommand, $parent, true, true );
+				}
+			}
 		}
 	}
 
@@ -352,7 +379,7 @@ EOT;
 					$key = key( $ret['parameters'][ $param_name ] );
 					reset( $ret['parameters'][ $param_name ] );
 					if ( ! empty( $ret['parameters'][ $param_name ][ $key ][2] )
-						&& '{' === substr( $ret['parameters'][ $param_name ][ $key ][2], -1 ) ) {
+					     && '{' === substr( $ret['parameters'][ $param_name ][ $key ][2], -1 ) ) {
 						$in_param = array( $param_name, $key );
 					}
 				}
@@ -370,13 +397,13 @@ EOT;
 		$ret['short_description'] = trim( implode( ' ', $short_desc ) );
 		$long_description         = trim( implode( PHP_EOL, $bits ), PHP_EOL );
 		$ret['long_description']  = $long_description;
+
 		return $ret;
 	}
 
 	private static function invoke_ee( $args ) {
-
 		ob_start();
-		EE::run_command( explode(' ', $args ) );
+		EE::run_command( explode( ' ', $args ) );
 		$json = ob_get_clean();
 
 		return json_decode( $json, true );
@@ -385,6 +412,7 @@ EOT;
 	private static function render( $path, $binding ) {
 		$m        = new Mustache_Engine;
 		$template = file_get_contents( EE_HANDBOOK_PATH . "/templates/$path" );
+
 		return $m->render( $template, $binding );
 	}
 }
