@@ -13,10 +13,12 @@ Following are the images that are maintained by EasyEngine team -
 
 
 ## easyengine/nginx-proxy
-It is a fork of [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) that routes request to individual site's nginx containers. We've modified go template used to generate config to support some changes that ee needed such as - 
+It is a fork of [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) that routes request to individual site's nginx containers. We've modified nginx-proxy's go template used to generate config to support some changes that EasyEngine needed such as - 
  * [Allow routing based on path instead of just host](https://github.com/jwilder/nginx-proxy/pull/1083)
  * Change Basic Auth file structure to support auton only on admin-tools
  * Add whitelisting support using nginx allow module
+
+Note: SSL is terminated at nginx-proxy.
 
 ## easyengine/nginx
 Every site will have it's own nginx container. They will be created from this image.
