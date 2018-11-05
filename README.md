@@ -1,4 +1,4 @@
-easyengine/handbook
+easyengine/docs
 ====================
 
 ⚠️ _**WIP:** This repo is currently work in progress!_  🚧
