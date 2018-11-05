@@ -2,6 +2,8 @@
 
 The main repository for EasyEngine is at [easyengine/easyengine](https://github.com/EasyEngine/easyengine). It contains CLI framework for EasyEngine and other helpful functions and utilities that other packages or commands can use|
 
+## Commands
+
 Individual commands of EasyEngine v4 have their own repository. Here is a list of them:
 
 | Repository | Descripton |
@@ -14,12 +16,16 @@ Individual commands of EasyEngine v4 have their own repository. Here is a list o
 | [easyengine/config-command](https://github.com/EasyEngine/config-command)   | Used to add/remove config from EasyEngine's global configuration file|
 | [easyengine/admin-tools-command](https://github.com/EasyEngine/admin-tools-command) | Used to enable/disable admin-tools on a site|
 
+## Site Types
+
 There are also seperate repos for "site types". They extend site-command and have logic to create a particular type of site:
 
 | Repository | Descripton |
 | ---------- | ---------- |
 | [easyengine/site-type-php](https://github.com/EasyEngine/site-type-php) | Contains logic to manage PHP site |
 | [easyengine/site-type-wp](https://github.com/EasyEngine/site-type-wp) | Contains logic to manage WP site |
+
+## Other Repos
 
 Here are other repos used by EasyEngine team:
 
