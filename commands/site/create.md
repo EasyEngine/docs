@@ -1,3 +1,105 @@
+# ee site create --type=html
+
+Runs the standard HTML site installation.
+
+### OPTIONS
+
+&lt;site-name&gt;
+: Name of website.
+
+[\--ssl=&lt;value&gt;]
+: Enables ssl via letsencrypt certificate.
+
+[\--wildcard]
+: Gets wildcard SSL .
+
+[\--type=&lt;type&gt;]
+: Type of the site to be created. Values: html,php,wp etc.
+
+[\--skip-status-check]
+: Skips site status check.
+
+### EXAMPLES
+
+    # Create html site
+    $ ee site create example.com
+
+    # Create html site with ssl from letsencrypt
+    $ ee site create example.com --ssl=le
+
+    # Create html site with wildcard ssl
+    $ ee site create example.com --ssl=le --wildcard
+
+
+# ee site create --type=php
+
+Runs the standard PHP Site installation.
+
+### OPTIONS
+
+&lt;site-name&gt;
+: Name of website.
+
+[\--cache]
+: Use redis cache for PHP.
+
+[\--admin-email=&lt;admin-email&gt;]
+: E-Mail of the administrator.
+
+ [--with-db]
+: Create database for php site.
+
+[\--local-db]
+: Create separate db container instead of using global db.
+
+[\--dbname=&lt;dbname&gt;]
+: Set the database name.
+
+[\--dbuser=&lt;dbuser&gt;]
+: Set the database user.
+
+[\--dbpass=&lt;dbpass&gt;]
+: Set the database password.
+
+[\--dbhost=&lt;dbhost&gt;]
+: Set the database host. Pass value only when remote dbhost is required.
+
+[\--with-local-redis]
+: Enable cache with local redis container.
+
+[\--skip-check]
+: If set, the database connection is not checked.
+
+[\--skip-status-check]
+: Skips site status check.
+
+[\--ssl=&lt;value&gt;]
+: Enables ssl on site.
+
+[\--wildcard]
+: Gets wildcard SSL .
+
+[\--force]
+: Resets the remote database if it is not empty.
+
+### EXAMPLES
+
+    # Create php site (without db)
+    $ ee site create example.com --type=php
+
+    # Create php site with db
+    $ ee site create example.com --type=php --with-db
+
+    # Create php site with ssl from letsencrypt
+    $ ee site create example.com --type=php --ssl=le
+
+    # Create php site with wildcard ssl
+    $ ee site create example.com --type=php --ssl=le --wildcard
+
+    # Create php site with remote database
+    $ ee site create example.com --type=php --with-db --dbhost=localhost --dbuser=username --dbpass=password
+
+
 # ee site create --type=wp
 
 Runs the standard WordPress Site installation.
