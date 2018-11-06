@@ -4,7 +4,7 @@ Let's say there are two sites on our server - example-html.com, which is a HTML 
 
 ## HTML
 
-![ee4 html site diagram](https://user-images.githubusercontent.com/8456197/48013532-86312f80-e14a-11e8-80e9-57b980b09b55.png)
+![ee4 site diagram-html](https://user-images.githubusercontent.com/8456197/48045978-86681400-e1b8-11e8-9517-347ae095c26f.png)
 
 1. User requests for https://example-html.com. The request is received by nginx-proxy on port 443. SSL is terminated here.
 2. nginx-proxy forwards the request to site's nginx container on port 80.
@@ -12,8 +12,7 @@ Let's say there are two sites on our server - example-html.com, which is a HTML 
 4. nginx-proxy forwards the response to user.
 
 ## PHP/WordPress Without Cache
-
-![ee4 wp site diagram](https://user-images.githubusercontent.com/8456197/48013529-85000280-e14a-11e8-86fa-551c2d40b020.png)
+![ee4 site diagram-wp non cached](https://user-images.githubusercontent.com/8456197/48045977-85cf7d80-e1b8-11e8-889b-df8d744b690e.png)
 
 1. User requests for https://example-wp.com. The request is received by nginx-proxy on port 443. SSL is terminated here.
 2. nginx-proxy forwards the request to site's nginx container on port 80.
@@ -25,7 +24,7 @@ Let's say there are two sites on our server - example-html.com, which is a HTML 
 
 ## WordPress with Cache
 
-![ee4 wp cached site diagram](https://user-images.githubusercontent.com/8456197/48013530-85989900-e14a-11e8-9c26-dc9eea84f253.png)
+![ee4 site diagram-wp with cache](https://user-images.githubusercontent.com/8456197/48045974-85cf7d80-e1b8-11e8-9ff6-2b0116d2172d.png)
 
 1. User requests for https://example-wp.com. The request is received by nginx-proxy on port 443. SSL is terminated here.
 2. nginx-proxy forwards the request to site's nginx container on port 80.
