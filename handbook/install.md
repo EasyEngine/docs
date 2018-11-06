@@ -24,18 +24,23 @@ chmod +x /usr/local/bin/ee
 
 ### Tab completions
 
-EasyEngine also comes with a tab completion script for Bash and ZSH. Just download [ee-completion.bash](https://raw.githubusercontent.com/EasyEngine/easyengine/develop-v4/utils/ee-completion.bash) and source it from `~/.bash_profile`:
-
+EasyEngine also comes with a tab completion script for Bash and ZSH. To add it, run the following command - 
 ```bash
-source /FULL/PATH/TO/ee-completion.bash
+wget -qO ~/.ee-completion.bash https://raw.githubusercontent.com/EasyEngine/easyengine/develop-v4/utils/ee-completion.bash
 ```
 
-Don't forget to run `source ~/.bash_profile` afterwards.
-
-If using zsh for your shell, you may need to load and start `bashcompinit` before sourcing. Put the following in your `.zshrc`:
-
+If you use bash, run - 
 ```bash
+echo 'source ~/.ee-completion.bash' >> ~/.bash_profile
+source ~/.ee-completion.bash
+```
+
+If you use zsh, run - 
+```bash
+cat <<EOF >> ~/.zshrc
 autoload bashcompinit
 bashcompinit
-source /FULL/PATH/TO/ee-completion.bash
+source ~/.ee-completion.bash
+EOF
+source ~/.zshrc
 ```
