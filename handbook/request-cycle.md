@@ -1,6 +1,6 @@
 ## Request Cycle
 
-Let's say there are two sites on our server - example-html.com, which is a WordPress site and example-wp.com, which is a HTML site.
+Let's say there are two sites on our server - example-html.com, which is a HTML site and example-wp.com, which is a WordPress site.
 
 ## HTML
 
@@ -31,5 +31,7 @@ Let's say there are two sites on our server - example-html.com, which is a WordP
 2. nginx-proxy forwards the request to site's nginx container on port 80.
 3. The site's nginx then forwards the request to redis. 
 4. If the request is cached, then redis forwards cached response to site's nginx. 
-5. The site's nginx forwards the response to nginx-proxy.
-6. nginx-proxy forwards the response to user.
+5. If the request is not cached, the site's nginx forwards the request to PHP.
+6. PHP process request and forwards the response to site's nginx which stores the response in cache. 
+7. The site's nginx forwards the response to nginx-proxy.
+8. nginx-proxy forwards the response to user.
