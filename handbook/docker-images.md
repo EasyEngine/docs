@@ -89,7 +89,7 @@ Redis is used for full page caching and WordPress object caching.
 ## easyengine/postfix
 Postfix is used to send emails. If you want to send emails through external email service like gmail or Amazon SES, Postfix is not necessary and could be disabled. The feature to disable postfix will be available in furute EasyEngine releases.
 
-We recommend using [Delicious Brain's plugin](https://wordpress.org/plugins/wp-ses/) if you're planning to send mail through Amazon SES
+We recommend using [Delicious Brain's](https://wordpress.org/plugins/wp-ses/) or [Human Made's](https://github.com/humanmade/aws-ses-wp-mail) plugin if you're planning to send mail through Amazon SES.
 
 ## easyengine/mailhog
 Mailhog serves as a mailcatcher utility when you do not want your mail to go out of your server. 
