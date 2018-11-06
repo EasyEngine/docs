@@ -6,7 +6,7 @@ All files created by EasyEngine are stored at `/opt/easyengine`
 
 By default, all EasyEngine sites are created at `/opt/easyengine/sites`. Configuration and logs of individual site's NGINX, PHP, Postfix are stored in `/opt/easyengine/sites/example.com`. 
 
-Checkout the documentation on [a site's filesystem structure](https://github.com/EasyEngine/docs/blob/master/handbook/site-structure.md) to know more about it.
+Checkout the documentation on [a site's filesystem structure](site-structure.md) to know more about it.
 
 ## Services
 
