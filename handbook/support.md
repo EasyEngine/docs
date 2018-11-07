@@ -9,5 +9,5 @@ For sharing feedback on EasyEngine and to discuss about EasyEngine, you can come
 ## Github
 If you think you've found a bug in EasyEngine, you can create the issue in [one of our github repositories](github-repos.md).
 
-## Paid Support :warning:
+## Paid Support
  EasyEngine does not provide paid support as most of the time of core developers goes in building EasyEngine :rocket:. Hence they have very litte to no time left for serving support queries. 
