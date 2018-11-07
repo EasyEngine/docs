@@ -1,24 +1,19 @@
 # Emails in EasyEngine
 
-EasyEngine v4 has support for sending emails out of the box just like v3 had, but it does not have support for receiving incoming emails. This was done as maintaining a mailserver is a challenging task, both for site administrators(you) and EasyEngine developers. If you _really_ want a mail server, we recommend using managed email service provider like [Gmail for work](https://gsuite.google.co.in/intl/en_in/products/gmail/) or [Rackspace](https://www.rackspace.com/en-in/email-hosting/).
+EasyEngine v4 has support for sending emails out of the box just like v3 had, but it does not have support for receiving incoming emails. This was done as maintaining a mailserver is a challenging task, both for site administrators and EasyEngine developers. If you _really_ want a mail server, we recommend using managed email service provider like [Gmail for work](https://gsuite.google.co.in/intl/en_in/products/gmail/) or [Rackspace](https://www.rackspace.com/en-in/email-hosting/).
 
 ## Sending Emails in EasyEngine
 
-All PHP and WordPress sites come with Postfix configured to send emails. So by out of the box, for any site, PHP's [mail()](http://php.net/manual/en/function.mail.php) or WordPress's [wp_mail()](https://developer.wordpress.org/reference/functions/wp_mail/) function should work.
+All PHP and WordPress sites in EasyEngine come with [Postfix](http://www.postfix.org/) configured to send emails. So by out of the box, for any site, PHP's [mail()](http://php.net/manual/en/function.mail.php) or WordPress's [wp_mail()](https://developer.wordpress.org/reference/functions/wp_mail/) function should work.
 
 To test if mails sending are working on a site, run - 
 ```
 ee shell example.com
-# Commands below should be executed in site's shell
-```
 
-Then for WordPress site, run - 
-```
+# For WordPress site
 wp eval 'echo wp_mail("your-email@example.com","Hello Human","Hello from EasyEngine!");'
-``` 
 
-For PHP site, run - 
-```
+# For PHP site
 php -r 'mail("your-email@example.com", "Hello Human", "Hello from EasyEngine!");'
 ```
 
@@ -36,6 +31,6 @@ After enabling mailhog, go to `example.com/ee-admin/mailhog`. Here you will see 
 
 ## Using AWS SES or other email service
 
-If you want to use external email service, Postfix is not needed and can be disabled. However command to disable Postfix is not yet in EasyEngine. It will be available in future release. You can track it's progress [here](https://github.com/EasyEngine/easyengine/issues/1276).
+If you want to use external service for sending emails, Postfix is not needed and can be disabled. However command to disable Postfix is not yet in EasyEngine. It will be available in future release. You can track it's progress [here](https://github.com/EasyEngine/easyengine/issues/1276).
 
 If you are going to use AWS SES with WordPress, we recommend using Delicious brain's [wp-ses](https://wordpress.org/plugins/wp-ses/) or Human Made's [aws-ses-wp-mail](https://github.com/humanmade/aws-ses-wp-mail).
