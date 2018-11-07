@@ -32,4 +32,10 @@ After enabling mailhog, go to `example.com/ee-admin/mailhog`. Here you will see 
 
 ![mailhog screen](https://user-images.githubusercontent.com/8456197/48132429-7edc6400-e2b9-11e8-919e-08c20bfe9366.png)
 
-:warning: _Note_: If you're using mailhog in production, don't forget to turn it off 
+:warning: _Note_: If you're using mailhog in production, don't forget to turn it off.
+
+## Using AWS SES or other email service
+
+If you want to use external email service, Postfix is not needed and can be disabled. However command to disable Postfix is not yet in EasyEngine. It will be available in future release. You can track it's progress [here](https://github.com/EasyEngine/easyengine/issues/1276).
+
+If you are going to use AWS SES with WordPress, we recommend using Delicious brain's [wp-ses](https://wordpress.org/plugins/wp-ses/) or Human Made's [aws-ses-wp-mail](https://github.com/humanmade/aws-ses-wp-mail).
