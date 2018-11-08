@@ -1,13 +1,6 @@
 # Requesting Support
 
-## Community Forum
-If you have any question like how to do ____ i.e. how to setup SFTP in EasyEngine, you should post in [community forum](https://community.easyengine.io/). There are helpful folks around who might be able to guide you 🕵🏻‍♂️️.
-
-## Slack
-For sharing feedback on EasyEngine and for discussion related to EasyEngine development, you can come by and say hello to us on slack :wave: [![Join EasyEngine Slack Channel](http://slack.easyengine.io/badge.svg)](http://slack.easyengine.io/)
-
-## Github
-If you think you've found a bug in EasyEngine, you can create the issue in [one of our github repositories](github-repos.md).
+If you are facing any issue which is or is not related to EasyEngine, you can post in [community forums](https://community.easyengine.io/). EasyEngine team keeps monitoring forums and if they find any post which has issue which might be caused due to EasyEngine, we will create an issue on github.
 
 ## Paid Support
  EasyEngine does not provide paid support as most of the time of core developers goes in building EasyEngine :rocket:. Hence they have very litte to no time left for serving support queries.
