@@ -2,12 +2,12 @@
 
 ## WP-CLI as a CLI framework
 
-Back when the development of EasyEngine v4 hadn't started, and we had already decided to move away for python and towards PHP, we were looking at how CLI apps were made in PHP and which framework to build v4. We evaluated many options like symphony console, laravel, lumen and wp-cli. Out of all these, the one that fit our needs best was wp-cli.
+Back when the development of EasyEngine v4 hadn't started, we had already decided to move away from Python and towards PHP. At that time, we were looking at how CLI apps were made in PHP and which framework to build v4 on. We evaluated many options like Symphony Console, Laravel, Lumen and wp-cli. Out of all these, the one that fit our needs best was wp-cli.
 
 Here are things we liked about it - 
  * Community familiarity
  * Commands in separate repository
- * Help/Documentation generation directly from code docblocks
+ * Managing documentation is easy
  * Extensible
 
 
@@ -19,7 +19,7 @@ Most of the EasyEngine community are WordPress users and hence most of them are 
 
 All commands in wp-cli live in their own repositories. We really liked this way of separating concerns.
 
-### Help/Documentation generation directly from code docblocks
+### Managing documentation is easy
 
 When you type `wp site --help`, the help that you see is being generated from corrosponding class/function's docblock! Hence whenever you make changes in code, to make changes in help/documentation, you don't have to make changes in another directory or repository. You just have to change the docblock and the help text will change.
 
