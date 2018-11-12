@@ -1,6 +1,6 @@
 # Emails in EasyEngine
 
-EasyEngine v4 has support for sending emails out of the box just like v3 had, but it does not have support for receiving incoming emails. This was done as maintaining a mailserver is a challenging task, both for site administrators and EasyEngine developers. If you _really_ want a mail server, we recommend using managed email service provider like [Gmail for work](https://gsuite.google.co.in/intl/en_in/products/gmail/) or [Rackspace](https://www.rackspace.com/en-in/email-hosting/).
+EasyEngine v4 has support for sending emails out of the box just like v3 had, but it does not have support for receiving incoming emails. This was done as maintaining a mailserver is a challenging task, both for site administrators and EasyEngine developers. If you really want a mail server, we recommend using managed email service provider like [Gmail for work](https://gsuite.google.co.in/intl/en_in/products/gmail/) or [Rackspace](https://www.rackspace.com/en-in/email-hosting/).
 
 ## Sending Emails in EasyEngine
 
@@ -27,7 +27,8 @@ After enabling mailhog, go to `example.com/ee-admin/mailhog`. Here you will see 
 
 ![mailhog screen](https://user-images.githubusercontent.com/8456197/48132429-7edc6400-e2b9-11e8-919e-08c20bfe9366.png)
 
-:warning: _Note_: If you're using mailhog in production, don't forget to turn it off.
+:warning: If you're using mailhog in production, don't forget to turn it off.
+:warning: Emails sent through SMTP will still be sent to actual mail servers. Only emails sent through PHP's mail function will be catched by mailhog.
 
 ## Using AWS SES or other email service
 
