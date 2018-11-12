@@ -2,7 +2,7 @@
 
 With EasyEngine v4, You'll be able to create your own commands for EasyEngine!
 
-:warning: For now, to **develop or run** custom commands you need to clone EasyEngine. It won't be required in future.
+:warning: For now, to **develop or run** custom commands you need to clone EasyEngine. This won't be required in future.
 
 ## Creating your own commands
 
@@ -11,20 +11,20 @@ With EasyEngine v4, You'll be able to create your own commands for EasyEngine!
 git clone git@github.com:easyengine/easyengine.git 
 ```
 
-2. Run `composer install` in the core repository after this.
+2. Run `composer install` in easyengine directory after this.
 
 3. Clone the [command skeleton repository](https://github.com/EasyEngine/command-template) and rename it to the command you want to create.
 
 4. Update the `name` in the `composer.json` of the  cloned repository. If the name is not updated properly then composer update/install with it will fail.
 
-5. Update the `composer.json` in the EasyEngine core repository, add the following in `require`:
-```
+5. Add below line in `composer.json` in the EasyEngine directory in `require` section:
+```json
 "author/command-name": "dev-master"
 ```
 Where author can be your github username.
 
-Also, append the following section in the `composer.json` for development:
-```
+Also, append the following section in the `composer.json` below `require` block:
+```json
 "repositories": {
     "author/command-name": {
         "type": "path",
@@ -46,7 +46,7 @@ Note: These manual steps for setting up a new EasyEngine command will be replace
 
 ## Running third party commands
 
-As EasyEngine does not have support for running external commands with PHAR, you'll have to first clone the repository and perform series of manual steps detailed below. Once we have support for it, it will be as simple as `ee package install author/packagename`.
+As EasyEngine does not have support for running external commands with PHAR, you'll have to first clone the repository and perform series of manual steps detailed below. Once we have support for running external commands with PHAR, it will be as simple as `ee package install author/packagename`.
 
 1. Clone the EasyEngine repository
 ```bash
@@ -54,13 +54,13 @@ git clone git@github.com:easyengine/easyengine.git
 ```
 2. Clone the command's repo.
 
-3. Update the `composer.json` in the EasyEngine core repository, add the following in `require`:
-```
+3. Update the `composer.json` in the EasyEngine directory, add the following in `require`:
+```json
 "author/command-name": "dev-master"
 ```
 
-Also, append the following section in the `composer.json` for development:
-```
+Also, append the following section in the `composer.json` below `require` block:
+```json
 "repositories": {
     "author/command-name": {
         "type": "path",
