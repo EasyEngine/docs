@@ -1,5 +1,4 @@
 # EasyEngine Developer Docs
-=========================
 
 ## Requirements
 
@@ -38,7 +37,7 @@ git clone git@github.com:EasyEngine/easyengine.git && git checkout develop-v4
 4. Append the following section in the `composer.json` for development, eg. for site-command:
 ```
 "repositories": {
-    "janedoe/site-command": {
+    "your-username/site-command": {
         "type": "path",
         "url": "path/to/your/forked/repository"
     }
