@@ -2,7 +2,7 @@
 
 Most of EasyEngine v4's server stack is on Docker containers. Running cron in containers is not as straightforward as it's on a linux server. There are many caveats that you have to take care of in order to ensure cron executes as it's intended and has no side effects.
 
-Hence, EasyEngine v4 uses [ofelia](https://github.com/mcuadros/ofelia) to schedule and run cron. Ofelia runs in a separate container and does is, it schedules all cron jobs according to a config and when it has to excecute the cron, it runs the command into the target container similar to how we execute commands in container with `docker exec`.
+Hence, EasyEngine v4 uses [ofelia](https://github.com/mcuadros/ofelia) to schedule and run cron. Ofelia runs in a separate container and it schedules all cron jobs according to a config and when it has to excecute the cron, it runs the command into the target container similar to how we execute commands in container with `docker exec`.
 
 ## Adding your cron job to easyengine
 
