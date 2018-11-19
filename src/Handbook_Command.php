@@ -12,8 +12,14 @@
 define( 'EE_HANDBOOK_PATH', dirname( dirname( __FILE__ ) ) );
 
 class Handbook_Command extends EE_Command {
+
+	public $output_dir = EE_HANDBOOK_PATH;
+
 	/**
 	 * Generate markdowns for all commands, generate manifest for commands markdown and generate manifest for handbook.
+	 *
+	 * [<output-dir>]
+	 * : Output docs directory
 	 *
 	 * ## EXAMPLES
 	 *
@@ -21,7 +27,12 @@ class Handbook_Command extends EE_Command {
 	 *
 	 * @subcommand gen-all
 	 */
-	public function gen_all() {
+	public function gen_all( $args ) {
+
+		if ( ! empty( $args[0] ) ) {
+			$this->output_dir = $args[0];
+		}
+
 		self::gen_commands();
 		self::gen_commands_manifest();
 		self::gen_hb_manifest();
@@ -31,13 +42,21 @@ class Handbook_Command extends EE_Command {
 	/**
 	 * Generate markdown file for each ee command.
 	 *
+	 * [<output-dir>]
+	 * : Output docs directory
+	 *
 	 * ## EXAMPLES
 	 *
 	 *     $ ee handbook gen-commands
 	 *
 	 * @subcommand gen-commands
 	 */
-	public function gen_commands() {
+	public function gen_commands( $args ) {
+
+		if ( ! empty( $args[0] ) ) {
+			$this->output_dir = $args[0];
+		}
+
 		$ee           = self::invoke_ee( 'site cmd-dump' );
 		$bundled_cmds = array();
 		foreach ( $ee['subcommands'] as $k => $cmd ) {
@@ -49,7 +68,7 @@ class Handbook_Command extends EE_Command {
 		}
 		$ee['subcommands'] = array_values( $ee['subcommands'] );
 		foreach ( $ee['subcommands'] as $cmd ) {
-			self::gen_cmd_pages( $cmd );
+			$this->gen_cmd_pages( $cmd );
 		}
 		$package_dir      = dirname( __DIR__ ) . '/bin/packages';
 		$ee_with_packages = self::invoke_ee( 'site cmd-dump' );
@@ -61,7 +80,7 @@ class Handbook_Command extends EE_Command {
 		}
 		$ee_with_packages['subcommands'] = array_values( $ee_with_packages['subcommands'] );
 		foreach ( $ee_with_packages['subcommands'] as $cmd ) {
-			self::gen_cmd_pages( $cmd );
+			$this->gen_cmd_pages( $cmd );
 		}
 		EE::success( 'Generated all command pages.' );
 	}
@@ -110,18 +129,26 @@ class Handbook_Command extends EE_Command {
 	/**
 	 * Generate `bin/commands-manifest.json` file from markdown in `commands` directory.
 	 *
+	 * [<output-dir>]
+	 * : Output docs directory
+	 *
 	 * ## EXAMPLES
 	 *
 	 *     $ ee handbook gen-commands-manifest
 	 *
 	 * @subcommand gen-commands-manifest
 	 */
-	public function gen_commands_manifest() {
+	public function gen_commands_manifest( $args ) {
+
+		if ( ! empty( $args[0] ) ) {
+			$this->output_dir = $args[0];
+		}
+
 		$manifest      = array();
 		$paths         = array(
-			EE_HANDBOOK_PATH . '/commands/*.md',
-			EE_HANDBOOK_PATH . '/commands/*/*.md',
-			EE_HANDBOOK_PATH . '/commands/*/*/*.md',
+			$this->output_dir . '/commands/*.md',
+			$this->output_dir . '/commands/*/*.md',
+			$this->output_dir . '/commands/*/*/*.md',
 		);
 		$commands_data = array();
 		foreach ( EE::get_root_command()->get_subcommands() as $command ) {
@@ -130,7 +157,7 @@ class Handbook_Command extends EE_Command {
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
-				$cmd_path = str_replace( array( EE_HANDBOOK_PATH . '/commands/', '.md' ), '', $file );
+				$cmd_path = str_replace( array( $this->output_dir . '/commands/', '.md' ), '', $file );
 				$title    = '';
 				$contents = file_get_contents( $file );
 				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
@@ -154,13 +181,21 @@ class Handbook_Command extends EE_Command {
 				}
 			}
 		}
-		file_put_contents( EE_HANDBOOK_PATH . '/bin/commands-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
+
+		if ( ! is_dir( $this->output_dir . '/bin' ) ) {
+			mkdir( $this->output_dir . '/bin' );
+		}
+
+		file_put_contents( $this->output_dir . '/bin/commands-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
 		$count = count( $manifest );
 		EE::success( "Generated commands-manifest.json of {$count} commands" );
 	}
 
 	/**
 	 * Generate `bin/handbook-manifest.json` file from markdown in `handbook` directory.
+	 *
+	 * [<output-dir>]
+	 * : Output docs directory
 	 *
 	 * ## EXAMPLES
 	 *
@@ -169,17 +204,22 @@ class Handbook_Command extends EE_Command {
 	 * @subcommand gen-hb-manifest
 	 */
 	public function gen_hb_manifest() {
+
+		if ( ! empty( $args[0] ) ) {
+			$this->output_dir = $args[0];
+		}
+
 		$manifest      = array();
 		$paths         = array(
-			EE_HANDBOOK_PATH . '/handbook/*.md',
-			EE_HANDBOOK_PATH . '/handbook/*/*.md',
-			EE_HANDBOOK_PATH . '/handbook/*/*/*.md',
+			$this->output_dir . '/handbook/*.md',
+			$this->output_dir . '/handbook/*/*.md',
+			$this->output_dir . '/handbook/*/*/*.md',
 		);
 		$commands_data = array();
 		foreach ( $paths as $path ) {
 			foreach ( glob( $path ) as $file ) {
 				$slug     = basename( $file, '.md' );
-				$cmd_path = str_replace( array( EE_HANDBOOK_PATH . '/handbook/', '.md' ), '', $file );
+				$cmd_path = str_replace( array( $this->output_dir . '/handbook/', '.md' ), '', $file );
 				$title    = '';
 				$contents = file_get_contents( $file );
 				if ( preg_match( '/^#\s(.+)/', $contents, $matches ) ) {
@@ -203,12 +243,12 @@ class Handbook_Command extends EE_Command {
 				}
 			}
 		}
-		file_put_contents( EE_HANDBOOK_PATH . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
+		file_put_contents( $this->output_dir . '/bin/handbook-manifest.json', json_encode( $manifest, JSON_PRETTY_PRINT ) );
 		$count = count( $manifest );
 		EE::success( "Generated handbook-manifest.json" );
 	}
 
-	private static function gen_cmd_pages( $cmd, $parent = array(), $skip_global = false, $return_str = false ) {
+	private function gen_cmd_pages( $cmd, $parent = array(), $skip_global = false, $return_str = false ) {
 		$parent[] = $cmd['name'];
 		static $params;
 		if ( ! isset( $params ) ) {
@@ -217,7 +257,7 @@ class Handbook_Command extends EE_Command {
 		$binding                = $cmd;
 		$binding['synopsis']    = implode( ' ', $parent );
 		$binding['path']        = implode( '/', $parent );
-		$path                   = '/commands/';
+		$path                   = $this->output_dir . '/commands/';
 		$binding['breadcrumbs'] = '[Commands](' . $path . ')';
 		foreach ( $parent as $i => $p ) {
 			$path .= $p . '/';
@@ -301,7 +341,7 @@ EOT;
 			$docs            = preg_replace( '/(#?## GLOBAL PARAMETERS).+/s', $replace_global, $docs );
 			$binding['docs'] = $docs;
 		}
-		$path = dirname( __DIR__ ) . "/commands/" . $binding['path'];
+		$path = $this->output_dir . "/commands/" . $binding['path'];
 		if ( ! is_dir( dirname( $path ) ) ) {
 			mkdir( dirname( $path ) );
 		}
@@ -320,7 +360,7 @@ EOT;
 				$command_name                         = explode( ' --type=', $subcmd['name'] );
 				$bundle_command[ $command_name[0] ][] = $subcmd;
 			} else {
-				self::gen_cmd_pages( $subcmd, $parent );
+				$this->gen_cmd_pages( $subcmd, $parent );
 			}
 		}
 		foreach ( $bundle_command as $name => $command ) {
@@ -328,14 +368,14 @@ EOT;
 			$md_doc = '';
 			foreach ( $command as $subcommand ) {
 				if ( $pop['name'] === $subcommand['name'] ) {
-					$md_doc .= self::gen_cmd_pages( $subcommand, $parent, false, true );
-					$path   = dirname( __DIR__ ) . "/commands/" . implode( '/', $parent ) . "/$name";
+					$md_doc .= $this->gen_cmd_pages( $subcommand, $parent, false, true );
+					$path   = $this->output_dir . "/commands/" . implode( '/', $parent ) . "/$name";
 					if ( ! is_dir( dirname( $path ) ) ) {
 						mkdir( dirname( $path ) );
 					}
 					file_put_contents( "$path.md", $md_doc );
 				} else {
-					$md_doc .= self::gen_cmd_pages( $subcommand, $parent, true, true );
+					$md_doc .= $this->gen_cmd_pages( $subcommand, $parent, true, true );
 				}
 			}
 		}
