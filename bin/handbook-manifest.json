@@ -1,4 +1,18 @@
 {
+    "add-php-modules": {
+        "title": "Add New PHP Module to Docker Image",
+        "slug": "add-php-modules",
+        "cmd_path": "add-php-modules",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/add-php-modules.md"
+    },
+    "admin-tools": {
+        "title": "Admin Tools in EasyEngine v4",
+        "slug": "admin-tools",
+        "cmd_path": "admin-tools",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/admin-tools.md"
+    },
     "buil-and-release": {
         "title": "Build and Release Process",
         "slug": "buil-and-release",
@@ -13,12 +27,47 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/core-repo.md"
     },
+    "cron": {
+        "title": "Crons in EasyEngine",
+        "slug": "cron",
+        "cmd_path": "cron",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/cron.md"
+    },
+    "custom-command": {
+        "title": "Custom Command Development",
+        "slug": "custom-command",
+        "cmd_path": "custom-command",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/custom-command.md"
+    },
+    "docker-images": {
+        "title": "Docker Images Maintained by EasyEngine Team",
+        "slug": "docker-images",
+        "cmd_path": "docker-images",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/docker-images.md"
+    },
     "ee-developer-doc": {
         "title": "EasyEngine Developer Docs",
         "slug": "ee-developer-doc",
         "cmd_path": "ee-developer-doc",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/ee-developer-doc.md"
+    },
+    "filesystem": {
+        "title": "",
+        "slug": "filesystem",
+        "cmd_path": "filesystem",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/filesystem.md"
+    },
+    "github-repos": {
+        "title": "List of Github Repos on EasyEngine Organization",
+        "slug": "github-repos",
+        "cmd_path": "github-repos",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/github-repos.md"
     },
     "handbook-doc": {
         "title": "steps",
@@ -27,11 +76,60 @@
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/handbook-doc.md"
     },
+    "install": {
+        "title": "",
+        "slug": "install",
+        "cmd_path": "install",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/install.md"
+    },
+    "mail": {
+        "title": "Emails in EasyEngine",
+        "slug": "mail",
+        "cmd_path": "mail",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/mail.md"
+    },
     "migrate": {
         "title": "EE3 to EE4 manual migration steps (To another server)",
         "slug": "migrate",
         "cmd_path": "migrate",
         "parent": null,
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/migrate.md"
+    },
+    "migrating-from-v3": {
+        "title": "Migrating From v3",
+        "slug": "migrating-from-v3",
+        "cmd_path": "migrating-from-v3",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/migrating-from-v3.md"
+    },
+    "request-cycle": {
+        "title": "",
+        "slug": "request-cycle",
+        "cmd_path": "request-cycle",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/request-cycle.md"
+    },
+    "site-structure": {
+        "title": "Site Filesystem Structure",
+        "slug": "site-structure",
+        "cmd_path": "site-structure",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/site-structure.md"
+    },
+    "support": {
+        "title": "Requesting Support",
+        "slug": "support",
+        "cmd_path": "support",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/support.md"
+    },
+    "wp-cli": {
+        "title": "WP-CLI and EasyEngine",
+        "slug": "wp-cli",
+        "cmd_path": "wp-cli",
+        "parent": null,
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/handbook\/wp-cli.md"
     }
 }
