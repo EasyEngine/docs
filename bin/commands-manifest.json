@@ -328,26 +328,12 @@
         "parent": "service",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/service\/restart.md"
     },
-    "site\/create --type=html": {
+    "site\/create": {
         "title": "ee site create --type=html",
-        "slug": "create --type=html",
-        "cmd_path": "site\/create --type=html",
+        "slug": "create",
+        "cmd_path": "site\/create",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=html.md"
-    },
-    "site\/create --type=php": {
-        "title": "ee site create --type=php",
-        "slug": "create --type=php",
-        "cmd_path": "site\/create --type=php",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=php.md"
-    },
-    "site\/create --type=wp": {
-        "title": "ee site create --type=wp",
-        "slug": "create --type=wp",
-        "cmd_path": "site\/create --type=wp",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create --type=wp.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/create.md"
     },
     "site\/delete": {
         "title": "ee site delete",
@@ -384,47 +370,19 @@
         "parent": "site",
         "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/list.md"
     },
-    "site\/reload --type=html": {
+    "site\/reload": {
         "title": "ee site reload --type=html",
-        "slug": "reload --type=html",
-        "cmd_path": "site\/reload --type=html",
+        "slug": "reload",
+        "cmd_path": "site\/reload",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=html.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload.md"
     },
-    "site\/reload --type=php": {
-        "title": "ee site reload --type=php",
-        "slug": "reload --type=php",
-        "cmd_path": "site\/reload --type=php",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=php.md"
-    },
-    "site\/reload --type=wp": {
-        "title": "ee site reload --type=wp",
-        "slug": "reload --type=wp",
-        "cmd_path": "site\/reload --type=wp",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/reload --type=wp.md"
-    },
-    "site\/restart --type=html": {
+    "site\/restart": {
         "title": "ee site restart --type=html",
-        "slug": "restart --type=html",
-        "cmd_path": "site\/restart --type=html",
+        "slug": "restart",
+        "cmd_path": "site\/restart",
         "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=html.md"
-    },
-    "site\/restart --type=php": {
-        "title": "ee site restart --type=php",
-        "slug": "restart --type=php",
-        "cmd_path": "site\/restart --type=php",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=php.md"
-    },
-    "site\/restart --type=wp": {
-        "title": "ee site restart --type=wp",
-        "slug": "restart --type=wp",
-        "cmd_path": "site\/restart --type=wp",
-        "parent": "site",
-        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart --type=wp.md"
+        "markdown_source": "https:\/\/github.com\/EasyEngine\/handbook\/blob\/master\/commands\/site\/restart.md"
     },
     "site\/ssl": {
         "title": "ee site ssl",
