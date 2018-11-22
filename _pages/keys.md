@@ -1,0 +1,22 @@
+---
+ID: 131158
+post_title: Keys
+author: Dinesh Jain
+post_excerpt: ""
+layout: page
+permalink: https://easyengine.io/keys/
+published: true
+post_date: 2015-11-23 12:35:14
+---
+<h1 id="how-to-add-public-ssh-key-into-your-server">How to add public SSH key into your server?</h1>
+Use following commands to add our public SSH keys into server
+<pre><code>mkdir -p ~/.ssh
+
+cat &lt;&lt;EOF &gt;&gt; ~/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7tDVPV0UKE9MAc+PfKiKorJc1UBppxCUYHNVTzxLSeSD9zphaoz/KXBhMXlqQO5BkAPx8BTctD1nBwEtzLr0TUfD1Y4dlJs/TPIoqtk/shFvCnFlUW0DMnUlKPMLurD9x8/Gu85UGGJRX1qeQwgx15iTPToY5P92Ik9WnruUILjiN+by5PyHCcJeihPnbSJsS9GjEcpJW5/k3pgrhMgaQDZZ0+MkLp3SAihXLnfw7pskPimosVoDXKDenAPe0SmBs/SmOXGfUrKNnQPWZHS8uYhj3nRle9A64vlNPwllaBXI+09o7McJ1ov1L2Zay1VjAwrAgVw6ZP9aOfWAgCpruw== Rahul Bansal rtCamp.com
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAoViSyJq64eNfp5oENTC2M3lbHKuyoReNIK9JIob0yicpWjRBtoWWhCZwdbBKgq+XYdQdget809zXNEZAhz8NqqalPz6ZN8daLsxPLVjc5ozmHmtu/K0x8pDH8+kurY0ExdlWfEYWvGCP0YQLRKg2lJc5iJCzAaDIHcd03G1b9jfmn0/PMqineDgBgz8o6teFvwMfTPAJ7PefDvP7LMjU8w0CdqIl5qBAxuRbvPL2oaTSXSBt4/qEMMFtMECx/sBZGiBpRXVaWoPnucMVuVA49cyj/z2jWKrIh8MZY8GbbwZrgPuCagM97D2GBpe3vUfewtWvuNIfbd4geq0E8crMpw== Radhakrishnan rtCamp.com
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqUGaszONqgDYUMLvo0PIIeDUAfQPaRtJhvF3ec93jE6+x+sLn2PheTMbHsRMy1LaAoEg8Ipuk01Q2AJPjM/vloHwWQJn6O+vnwvaSWASwJ0Tes7MoUUYq3h+PZuKRTtNNMQLy66Xk3yEEWPeoic4Ulc+HxHt0OA0SzNKgC8EQH189X6gbSkvvmDAMhfD5Idif/HDFm/KNJgXsNE0bBvDJGFNzpgPItqkjBLP9ZtTwOvz780Wx/EaYRAHb49CQtp1Xbaa1vTEVNy5XU4DK2WDblpc/U8iOj1bmtDl9453GbzVc3PJ/ZTG+csGJzd+m3oplkHkipmkSMF7D4vrECEJVbwR/8OrMpbHsyWgvsmqd78ynjeEF+oMgbWxfceRnMwRI24jseRrb23o3HeBka8rfmbidTFXmrIiZsy+u4m55qLix7Mf+br6k4DzpQY4sCJ3bb23qdx3KH7P/pFEwRj/w2DI+YjMTXlEDUg75zO4mjhpOjFV8x+G3Cu5yXbLVJR6YfaYcj7nSIaTdDni6WXvy1ObCUxpMVok83DaJu04/LKMHx02gnHHEq9Y7MfZLLPzDQULMcYCglMFaGRBtcAMVpeLuDcPqPx3BrdLJ++rzRIUeSkGaLW0i79uwUC2ui43KkMExQdQqFQzpF7q1qqJC/A3TXOq+Nwx0RdJ0i140OQ== Mriyam Tamuli rtCamp.com
+EOF
+
+chmod 600 ~/.ssh/authorized_keys
+</code></pre>

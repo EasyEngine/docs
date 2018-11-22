@@ -9,7 +9,7 @@ post_excerpt: >
   wordpress-multisites and different
   page-caches.
 layout: page
-permalink: https://easyengine.d.rtdemo.in/
+permalink: https://easyengine.io/easyengine/
 published: true
 post_date: 2013-08-08 12:07:56
 ---
