@@ -40,9 +40,17 @@ post_date: 2018-11-20 11:41:47
 <pre class="wp-block-code"><code>brew install easyengine</code></pre>
 <!-- /wp:code -->
 
-<!-- wp:heading {"level":4} -->
-<h4>Not using brew?</h4>
-<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>⚠️<em><strong>Note:</strong> While we wait for <a href="https://github.com/Homebrew/homebrew-core/pull/34378">this PR to merge in brew</a>, please use following&nbsp;alternative:</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">brew install https://rt.cx/easyenginenull</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p><strong>Not using brew?</strong></p>
+<!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
 <p>You can install EasyEngine v4 on Mac by:</p>
