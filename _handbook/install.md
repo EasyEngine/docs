@@ -45,7 +45,7 @@ post_date: 2018-11-20 11:41:47
 <!-- /wp:paragraph -->
 
 <!-- wp:preformatted -->
-<pre class="wp-block-preformatted">brew install https://rt.cx/easyenginenull</pre>
+<pre class="wp-block-preformatted">brew install https://rt.cx/easyengine</pre>
 <!-- /wp:preformatted -->
 
 <!-- wp:paragraph -->
