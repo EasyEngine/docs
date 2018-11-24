@@ -9,19 +9,11 @@ published: true
 post_date: 2018-11-21 12:53:32
 ---
 <!-- wp:paragraph -->
-<p>EasyEngine v4 has support for sending emails out of the box just like v3 had, but it does not have support for receiving incoming emails. This was done as maintaining a mailserver is a challenging task, both for site administrators and EasyEngine developers. If you really want a mail server, we recommend using managed email service provider like <a href="https://gsuite.google.co.in/intl/en_in/products/gmail/">Gmail for work</a> or <a href="https://www.rackspace.com/en-in/email-hosting/">Rackspace</a>.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2>Sending Emails in EasyEngine</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
 <p>All PHP and WordPress sites in EasyEngine come with <a href="http://www.postfix.org/">Postfix</a> configured to send emails. So out of the box, for any site, PHP's <a href="http://php.net/manual/en/function.mail.php">mail()</a> or WordPress's <a href="https://developer.wordpress.org/reference/functions/wp_mail/">wp_mail()</a> function should work.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>To test if mails sending are working on a site, run -</p>
+<p>To test if mails sending are working on a site, run:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -55,7 +47,7 @@ php -r 'mail("your-email@example.com", "Hello Human", "Hello from EasyEngine!");
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>⚠️ If you're using Mailhog in production, don't forget to turn it off.<br>⚠️ Emails sent through SMTP will still be sent to actual mail servers. Only emails sent through PHP's mail function will be catched by Mailhog.</p>
+<p>⚠️&nbsp;If you're using Mailhog in production, don't forget to turn it off.<br>⚠️ Emails sent through SMTP will still be sent to actual mail servers. Only emails sent through PHP's mail function will be catched by Mailhog.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
