@@ -77,7 +77,7 @@ post_date: 2018-11-20 11:41:47
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Docker</li><li>Docker-Compose</li><li>PHP CLI (&gt;=7.1)</li><li>PHP Modules - <code>curl</code>, <code>sqlite3</code>, <code>pcntl</code>, <code>zip</code></li></ul>
+<ul><li>Docker</li><li>Docker-Compose</li><li>PHP CLI (>=7.2)</li><li>PHP Modules - <code>curl</code>, <code>sqlite3</code>, <code>pcntl</code>, <code>zip</code></li></ul>
 <!-- /wp:list -->
 
 <!-- wp:heading {"level":3} -->
