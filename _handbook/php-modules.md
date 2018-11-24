@@ -29,6 +29,7 @@ gd
 hash
 iconv
 imagick
+imap
 json
 libxml
 mbstring
@@ -48,6 +49,7 @@ redis
 Reflection
 session
 SimpleXML
+soap
 sodium
 SPL
 sqlite3
@@ -61,8 +63,7 @@ zip
 zlib
 
 [Zend Modules]
-Zend OPcache
-</code></pre>
+Zend OPcache</code></pre>
 <!-- /wp:code -->
 
 <!-- wp:heading -->
