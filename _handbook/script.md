@@ -38,7 +38,7 @@ post_date: 2018-11-21 14:14:39
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
-<pre class="wp-block-code"><code>wget -o migrate.sh https://rt.cx/ee3to4 &amp;&amp;
+<pre class="wp-block-code"><code>wget -O migrate.sh https://rt.cx/ee3to4 &amp;&amp;
 chmod +x migrate.sh</code></pre>
 <!-- /wp:code -->
 
