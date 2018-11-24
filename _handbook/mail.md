@@ -27,11 +27,27 @@ php -r 'mail("your-email@example.com", "Hello Human", "Hello from EasyEngine!");
 <!-- /wp:code -->
 
 <!-- wp:heading -->
+<h2>Using AWS SES for outbound emails</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If you are going to use AWS SES with WordPress, we recommend using Human Made's <a href="https://github.com/humanmade/aws-ses-wp-mail">aws-ses-wp-mail</a> WordPress plugin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you want to use external service for sending emails, Postfix is not needed and can be disabled.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>However command to disable Postfix is not yet in EasyEngine. It will be available in future release. You can track it's progress <a href="https://github.com/EasyEngine/easyengine/issues/1276">here</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
 <h2>Mailhog</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Sometimes you want to check if email is being sent by PHP script, or sometimes you don't want your email to go out of your server i.e on a development or staging site. In such case, you can <a href="https://github.com/EasyEngine/docs/blob/master/commands/mailhog/enable.md">enable mailhog</a> on the site.</p>
+<p>During development, you may want to disable all outbound emails and capture them for debugging. In such case, you can <a href="https://github.com/EasyEngine/docs/blob/master/commands/mailhog/enable.md">enable mailhog</a> on the site.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -48,16 +64,4 @@ php -r 'mail("your-email@example.com", "Hello Human", "Hello from EasyEngine!");
 
 <!-- wp:paragraph -->
 <p>⚠️&nbsp;If you're using Mailhog in production, don't forget to turn it off.<br>⚠️ Emails sent through SMTP will still be sent to actual mail servers. Only emails sent through PHP's mail function will be catched by Mailhog.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2>Using AWS SES or other email service</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>If you want to use external service for sending emails, Postfix is not needed and can be disabled. However command to disable Postfix is not yet in EasyEngine. It will be available in future release. You can track it's progress <a href="https://github.com/EasyEngine/easyengine/issues/1276">here</a>.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>If you are going to use AWS SES with WordPress, we recommend using Delicious brain's <a href="https://wordpress.org/plugins/wp-ses/">wp-ses</a> or Human Made's <a href="https://github.com/humanmade/aws-ses-wp-mail">aws-ses-wp-mail</a>.</p>
 <!-- /wp:paragraph -->
