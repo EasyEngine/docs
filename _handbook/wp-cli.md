@@ -57,7 +57,7 @@ post_date: 2018-11-20 12:11:21
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>When you type <code>ee help site</code>, the help that you see is being generated from corrosponding class/function's docblock! Hence whenever you make changes in code, to make changes in help/documentation, you don't have to make changes in another directory or repository. You just have to change the docblock and the help text will change.</p>
+<p>When you type&nbsp;<code>ee help site</code>, the help that you see is being generated from corrosponding class/function's docblock! Hence whenever you make changes in code, to make changes in help/documentation, you don't have to make changes in another directory or repository. You just have to change the docblock and the help text will change.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -93,7 +93,7 @@ post_date: 2018-11-20 12:11:21
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"ordered":true} -->
-<ol><li>Remove all WordPress specific code. Those codes were unrelated to EasyEngine's capabilities around WordPress site management.</li><li>Add support for routing of site types in a <code>ee site</code>command. This was required so that in future more site types support can be added easily.</li><li>Add database wrapper and data migrations support so that EasyEngine can manage it's own database &amp; upgrades.</li></ol>
+<ol><li>Remove all WordPress specific code. Those codes were unrelated to EasyEngine's capabilities around WordPress site management.</li><li>Add support for routing of site types in a <code>ee site</code> command. This was required so that in future more site types support can be added easily.</li><li>Add database wrapper and data migrations support so that EasyEngine can manage it's own database &amp; upgrades.</li></ol>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
