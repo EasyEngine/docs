@@ -58,7 +58,7 @@ post_date: 2018-11-20 12:20:00
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Please check the documentation on <a href="site-structure.md">a site's filesystem structure</a> to know more about individual site's files.</p>
+<p>Please check the documentation on <a href="https://easyengine.io/handbook/global-filesystem-structure/site-filesystem-structure/">a site's filesystem structure</a> to know more about individual site's files.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -70,11 +70,11 @@ post_date: 2018-11-20 12:20:00
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Configuration, logs and other files of these services can be found at <code>/opt/easyengine/services</code>.</p>
+<p>Configuration, logs and other files of these services can be found at&nbsp;<code>/opt/easyengine/services</code>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Please check the documentation on <a href="https://easyengine.io/handbook/services-filesystem-structure/">service filesystem structure</a> to know more about individual service.<br></p>
+<p>Please check the documentation on&nbsp;<a href="https://easyengine.io/handbook/services-filesystem-structure/">service filesystem structure</a>&nbsp;to know more about individual service.<br></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
