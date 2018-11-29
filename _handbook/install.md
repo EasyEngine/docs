@@ -41,14 +41,6 @@ post_date: 2018-11-20 11:41:47
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p>⚠️<em><strong>Note:</strong> While we wait for <a href="https://github.com/Homebrew/homebrew-core/pull/34378">this PR to merge in brew</a>, please use following&nbsp;alternative:</em></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:preformatted -->
-<pre class="wp-block-preformatted">brew install https://rt.cx/easyengine</pre>
-<!-- /wp:preformatted -->
-
-<!-- wp:paragraph -->
 <p><strong>Not using brew?</strong></p>
 <!-- /wp:paragraph -->
 
@@ -77,7 +69,7 @@ post_date: 2018-11-20 11:41:47
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Docker</li><li>Docker-Compose</li><li>PHP CLI (>=7.2)</li><li>PHP Modules - <code>curl</code>, <code>sqlite3</code>, <code>pcntl</code>, <code>zip</code></li></ul>
+<ul><li>Docker</li><li>Docker-Compose</li><li>PHP CLI (&gt;=7.2)</li><li>PHP Modules - <code>curl</code>, <code>sqlite3</code>, <code>pcntl</code>, <code>zip</code></li></ul>
 <!-- /wp:list -->
 
 <!-- wp:heading {"level":3} -->
