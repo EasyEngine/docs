@@ -1,11 +1,11 @@
 ---
 ID: 143306
-post_title: MySQL Root Acess
+post_title: MySQL Root Access
 author: Kirtan Gajjar
 post_excerpt: ""
 layout: handbook
 permalink: >
-  https://easyengine.io/handbook/mysql-root-acess/
+  https://easyengine.io/handbook/mysql-root-access/
 published: true
 post_date: 2018-11-29 14:56:12
 ---
