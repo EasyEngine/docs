@@ -16,3 +16,7 @@ post_date: 2018-11-29 14:56:12
 <!-- wp:code -->
 <pre class="wp-block-code"><code>docker exec -it ee-global-db bash -c 'mysql -uroot -p${MYSQL_ROOT_PASSWORD}'</code></pre>
 <!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
