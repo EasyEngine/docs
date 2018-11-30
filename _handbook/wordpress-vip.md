@@ -1,6 +1,6 @@
 ---
 ID: 143288
-post_title: WordPress VIP
+post_title: WordPress.com VIP Go Sites
 author: Kirtan Gajjar
 post_excerpt: ""
 layout: handbook
