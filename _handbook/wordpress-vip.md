@@ -1,16 +1,16 @@
 ---
 ID: 143288
-post_title: VIP Sites
+post_title: WordPress VIP
 author: Kirtan Gajjar
 post_excerpt: ""
 layout: handbook
 permalink: >
-  https://easyengine.io/handbook/vip-sites/
+  https://easyengine.io/handbook/wordpress-vip/
 published: true
 post_date: 2018-11-30 13:48:34
 ---
 <!-- wp:paragraph -->
-<p>EasyEngine v4.0.2 added support for VIP site types.</p>
+<p>EasyEngine v4.0.2 added support for creating WordPress VIP sites.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
