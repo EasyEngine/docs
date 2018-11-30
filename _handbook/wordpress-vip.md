@@ -42,25 +42,25 @@ post_date: 2018-11-30 13:48:34
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 id="mce_11">Create new VIP site from existing repository</h2>
+<h2 id="mce_11">Create VIP site from existing repository</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>If you have existing VIP repository on GitHub, use:</p>
+<p>If you have an existing VIP repository, on GitHub, you can pass repo URL to have your repo's content used.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
-<pre class="wp-block-code"><code>ee site create example.com --vip="git@github.com:wpcomvip/repo.git"</code></pre>
+<pre class="wp-block-code"><code>ee site create example.com --vip=git@github.com:rtcamp/my-vip-site.git</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Above command also has a shorthand version where you can pass <code>github-org-name/repo-name</code>&nbsp;directly. This automatically uses SSH based URL.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>ee site create example.com --vip=rtcamp/my-vip-site</code></pre>
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
 <p>This command will setup VIP site from a git repository. The site's <code>wp-content</code> will be replaced by the contents of git repository instead of the VIP skeleton repo.</p>
 <!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>You can even pass <code>http</code> URL of git:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
-<pre class="wp-block-code"><code>ee site create example.com --vip="https://github.com/wpcomvip/repo"</code></pre>
-<!-- /wp:code -->
