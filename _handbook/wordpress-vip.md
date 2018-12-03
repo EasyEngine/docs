@@ -10,7 +10,6 @@ published: true
 post_date: 2018-11-30 13:48:34
 ---
 <!-- wp:paragraph -->
-<p><img class="size-large wp-image-143360 alignnone" src="https://easyengine.io/wp-content/uploads/2018/11/easyengine-vip-site-1-720x517.png" alt="" width="720" height="517" /></p>
 <p>EasyEngine v4.0.2 added support for creating WordPress VIP sites.</p>
 <!-- /wp:paragraph -->
 
