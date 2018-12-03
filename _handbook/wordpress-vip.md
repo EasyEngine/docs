@@ -10,6 +10,7 @@ published: true
 post_date: 2018-11-30 13:48:34
 ---
 <!-- wp:paragraph -->
+<p><img class="size-large wp-image-143360 alignnone" src="https://easyengine.io/wp-content/uploads/2018/11/easyengine-vip-site-1-720x517.png" alt="" width="720" height="517" /></p>
 <p>EasyEngine v4.0.2 added support for creating WordPress VIP sites.</p>
 <!-- /wp:paragraph -->
 
@@ -30,15 +31,15 @@ post_date: 2018-11-30 13:48:34
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p>⚠️ <em>Note:</em>&nbsp;<code>--vip</code>&nbsp;flag implies <code>--type=wp</code>. Hence you can use the flags of WordPress site with it.&nbsp;</p>
+<p>⚠️ <em>Note:</em> <code>--vip</code> flag implies <code>--type=wp</code>. Hence you can use the flags of WordPress site with it. </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>This command will setup VIP site from VIP GO <a href="https://github.com/Automattic/vip-go-skeleton">skeleton repository</a>&nbsp;and install its <a href="https://github.com/Automattic/vip-go-mu-plugins-built">mu-plugins</a>.</p>
+<p>This command will setup VIP site from VIP GO <a href="https://github.com/Automattic/vip-go-skeleton">skeleton repository</a> and install its <a href="https://github.com/Automattic/vip-go-mu-plugins-built">mu-plugins</a>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>The VIP GO skeleton repository replaces&nbsp;<code>wp-content</code>&nbsp;of default WordPress installation.</p>
+<p>The VIP GO skeleton repository replaces <code>wp-content</code> of default WordPress installation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -54,7 +55,7 @@ post_date: 2018-11-30 13:48:34
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p>Above command also has a shorthand version where you can pass <code>github-org-name/repo-name</code>&nbsp;directly. This automatically uses SSH based URL.</p>
+<p>Above command also has a shorthand version where you can pass <code>github-org-name/repo-name</code> directly. This automatically uses SSH based URL.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
