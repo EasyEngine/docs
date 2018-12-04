@@ -413,5 +413,5 @@ post_date: 2018-11-21 16:33:41
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Please read this for v3 to v4 Migration Script [TODO LINK]</p>
+<p>Please read <a href="https://easyengine.io/handbook/v3-to-v4-migration/script/">this</a> for v3 to v4 Migration Script</p>
 <!-- /wp:paragraph -->
