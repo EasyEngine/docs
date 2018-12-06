@@ -90,7 +90,7 @@ post_date: 2018-11-21 16:33:41
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>v4 creates one network per site. Then v4 also needs few Docker networks for global services. So roughly we limit the number of sites to 25.</p>
+<p>v4 creates one network per site. Then v4 also needs few Docker networks for global services. So roughly we limit the number of sites to 27.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -102,7 +102,7 @@ post_date: 2018-11-21 16:33:41
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>If you already have a v3 server with more than 25 sites, you may migrate them in chuks to multiple v4 servers. </p>
+<p>If you already have a v3 server with more than 27 sites, you may migrate them in chuks to multiple v4 servers. </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
