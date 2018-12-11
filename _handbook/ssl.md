@@ -157,11 +157,11 @@ _acme-challenge.example.com descriptive text "bIcFm-nUWaOGjtqDiTFMvDz2aFInLyro5b
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>If there's a site which isn't wildcard but you still need DNS challenge on it, then you can do so by setting <code>preferred_dns_challange</code> option in config file to <code>dns</code>:</p>
+<p>If there's a site which isn't wildcard but you still need DNS challenge on it, then you can do so by setting <code>preferred_dns_challenge</code> option in config file to <code>dns</code>:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
-<pre class="wp-block-code"><code>ee config set preferred_ssl_challange dns</code></pre>
+<pre class="wp-block-code"><code>ee config set preferred_ssl_challenge dns</code></pre>
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
