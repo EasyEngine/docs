@@ -193,7 +193,7 @@ _acme-challenge.example.com descriptive text "bIcFm-nUWaOGjtqDiTFMvDz2aFInLyro5b
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>We use <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla's Intermediate profile</a> ciphers by default. In future we'll give users option to choose another cipher suite by adding an option to config file.</p>
+<p>We use <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla's Intermediate profile</a> ciphers by default. Other policies that you can use are - <code>Mozilla-Old, Mozilla-Intermediate, Mozilla-Modern, AWS-TLS-1-2-2017-01, AWS-TLS-1-1-2017-01, AWS-2016-08, AWS-2015-05, AWS-2015-03 and AWS-2015-02</code>. You can have a look at <a href="https://github.com/EasyEngine/dockerfiles/blob/78b9d1ba52d0ba6ba01548e9808dae83e812e542/nginx-proxy/nginx.tmpl#L291">our code</a> to see which ciphers and protocols will be used for which policy.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
