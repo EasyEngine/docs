@@ -10,15 +10,15 @@ published: true
 post_date: 2018-12-05 15:52:56
 ---
 <!-- wp:paragraph -->
-<p>EasyEngine uses <a href="https://github.com/acmephp/acmephp">AcmePHP</a> library to manage SSL certificates. You pass&nbsp;<code>--ssl</code> flag to create a site with SSL.</p>
+<p>EasyEngine uses <a href="https://github.com/acmephp/acmephp">AcmePHP</a> library to manage SSL certificates. You pass <code>--ssl</code> flag to create a site with SSL (HTTPS support).</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Currently there are three options you can pass to <code>--ssl</code> flag</p>
+<p>Currently there are three options you can pass to <code>--ssl</code>&nbsp;flag</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li><code>--ssl=le</code>. It should be used if you want to issue a new certificate from <a href="https://letsencrypt.org/">Let's Encrypt</a>.</li><li><code>--ssl=inherit</code>. It should be used if there's an existing site <code>example.com</code> with wildcard certificate and you want to create <code>abc.example.com</code> which will inherit (reuse) the certificate of <code>example.com</code> instead of issuing a new one.</li><li><code>--ssl=self</code> if you want to create a self signed certificate. Useful for https site on local machine.</li></ul>
+<ul><li><code>--ssl=le</code>. It&nbsp;should be used if you want to issue a new certificate from&nbsp;<a href="https://letsencrypt.org/">Let's Encrypt</a>.</li><li><code>--ssl=inherit</code>. It should be used if there's an existing site <code>example.com</code> with wildcard certificate and you want to create <code>abc.example.com</code>&nbsp;which will inherit (reuse) the certificate of&nbsp;<code>example.com</code>&nbsp;instead of issuing a new one.</li><li><code>--ssl=self</code>&nbsp;if you want to create a self signed certificate. Useful for https site on local machine.</li></ul>
 <!-- /wp:list -->
 
 <!-- wp:heading -->
@@ -150,7 +150,7 @@ post_date: 2018-12-05 15:52:56
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>You can generate a self signed certificate while creating a site by using <code>--ssl=self</code> flag. It is quite useful for creating https sites on local machine. </p>
+<p>You can generate a self signed certificate while creating a site by using <code>--ssl=self</code>&nbsp;flag. It is quite useful for creating https sites on local machine.&nbsp;</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:preformatted -->
